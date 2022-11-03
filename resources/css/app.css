@@ -1,0 +1,20 @@
+.wrapper{
+    display: flex;
+}
+
+.right-button{
+    margin-left: auto;
+}
+.carousel-indicators{
+    display: none !important;
+}
+.accordion-button:not(.collapsed)
+{
+    display: inline;
+    color: black !important;
+    background-color: white !important;
+}
+.accordion-button:after(.collapsed){
+    display: inline !important;
+
+}
