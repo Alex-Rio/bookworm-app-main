@@ -4,13 +4,14 @@ import HomePage from '../page/HomePage';
 import OnSale from '../js/components/HomePage/OnSale';
 import '../css/app.css';
 import ShopPage from '../page/ShopPage';
-import DetailBook from './components/books/DetailBook';
-import CustomerReview from './components/books/CustomerReviews';
-import CartBook from './components/books/CartBook';
+import DetailBook from './components/bookdetail/DetailBook';
+import CustomerReview from './components/bookdetail/ListReviews';
+import CartBook from './components/bookdetail/CartBook';
+import ReviewsCustomer from './components/bookdetail/ReviewPorts';
 
 ReactDOM.render(
 
-  <CartBook/>,
+  <ReviewsCustomer/>,
 
 
   document.getElementById('root')

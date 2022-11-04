@@ -76,7 +76,7 @@ class OnSale extends Component {
                                     </Card.Title>
                                     <Card.Text>Author Name</Card.Text>
 
-                                    <Card.Footer> <del>$Original</del> Price </Card.Footer>
+                                    <Card.Footer> <del>$Original</del> $Price </Card.Footer>
                                 </Card.Body>
                             </Card>
                             <Card>
