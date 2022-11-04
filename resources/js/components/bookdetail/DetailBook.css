@@ -1,0 +1,18 @@
+.wrapper-book-detail {
+    display: inline;
+
+}
+
+.wrapper-book-detail .img-author{
+    float: left;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.wrapper-book-detail .img-author img{
+    height: 250px;
+    width: 200px;
+
+}
+
+
