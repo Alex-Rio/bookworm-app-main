@@ -32,3 +32,12 @@
     height: 400px;
 
 }
+.card{
+    border-radius: 0 !important;
+
+}
+.btn{
+        height: 50px !important;
+        width: 200px !important;
+
+}

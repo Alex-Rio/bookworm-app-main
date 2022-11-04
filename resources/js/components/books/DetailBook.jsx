@@ -12,7 +12,7 @@ export default function DetailBook(){
               <Container>
               <Row md={8}>
                     <Col md={3}>
-                    <Card >
+                    <Card border='light' >
                         <Card.Img variant='top' className='style_img' src={imgBook1}/>
                         <Card.Text className='text-end'>
                             <p>By (author) <b>Name Author</b></p>
@@ -20,7 +20,7 @@ export default function DetailBook(){
                     </Card>
                     </Col>
                    <Col md={7} className="mt-4">
-                   <Card>
+                   <Card border='light' >
                         <Card.Title>
                             <b>Book title</b>
                         </Card.Title>
