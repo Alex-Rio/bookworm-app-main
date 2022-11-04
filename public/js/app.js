@@ -5839,51 +5839,6 @@ NavItem.displayName = 'NavItem';
 
 /***/ }),
 
-/***/ "./node_modules/@restart/ui/esm/NoopTransition.js":
-/*!********************************************************!*\
-  !*** ./node_modules/@restart/ui/esm/NoopTransition.js ***!
-  \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-
-function NoopTransition({
-  children,
-  in: inProp,
-  mountOnEnter,
-  unmountOnExit
-}) {
-  const hasEnteredRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(inProp);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    if (inProp) hasEnteredRef.current = true;
-  }, [inProp]);
-  if (inProp) return children; // not in
-  //
-  // if (!mountOnEnter && !unmountOnExit) {
-  //   return children;
-  // }
-
-  if (unmountOnExit) {
-    return null;
-  }
-
-  if (!hasEnteredRef.current && mountOnEnter) {
-    return null;
-  }
-
-  return children;
-}
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NoopTransition);
-
-/***/ }),
-
 /***/ "./node_modules/@restart/ui/esm/SelectableContext.js":
 /*!***********************************************************!*\
   !*** ./node_modules/@restart/ui/esm/SelectableContext.js ***!
@@ -5922,209 +5877,6 @@ __webpack_require__.r(__webpack_exports__);
 
 const TabContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createContext(null);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TabContext);
-
-/***/ }),
-
-/***/ "./node_modules/@restart/ui/esm/TabPanel.js":
-/*!**************************************************!*\
-  !*** ./node_modules/@restart/ui/esm/TabPanel.js ***!
-  \**************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   "useTabPanel": () => (/* binding */ useTabPanel)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _TabContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TabContext */ "./node_modules/@restart/ui/esm/TabContext.js");
-/* harmony import */ var _SelectableContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./SelectableContext */ "./node_modules/@restart/ui/esm/SelectableContext.js");
-/* harmony import */ var _NoopTransition__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./NoopTransition */ "./node_modules/@restart/ui/esm/NoopTransition.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-const _excluded = ["active", "eventKey", "mountOnEnter", "transition", "unmountOnExit", "role", "onEnter", "onEntering", "onEntered", "onExit", "onExiting", "onExited"],
-      _excluded2 = ["activeKey", "getControlledId", "getControllerId"],
-      _excluded3 = ["as"];
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-
-
-
-
-
-
-function useTabPanel(_ref) {
-  let {
-    active,
-    eventKey,
-    mountOnEnter,
-    transition,
-    unmountOnExit,
-    role = 'tabpanel',
-    onEnter,
-    onEntering,
-    onEntered,
-    onExit,
-    onExiting,
-    onExited
-  } = _ref,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
-  const context = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_TabContext__WEBPACK_IMPORTED_MODULE_2__["default"]);
-  if (!context) return [Object.assign({}, props, {
-    role
-  }), {
-    eventKey,
-    isActive: active,
-    mountOnEnter,
-    transition,
-    unmountOnExit,
-    onEnter,
-    onEntering,
-    onEntered,
-    onExit,
-    onExiting,
-    onExited
-  }];
-
-  const {
-    activeKey,
-    getControlledId,
-    getControllerId
-  } = context,
-        rest = _objectWithoutPropertiesLoose(context, _excluded2);
-
-  const key = (0,_SelectableContext__WEBPACK_IMPORTED_MODULE_3__.makeEventKey)(eventKey);
-  return [Object.assign({}, props, {
-    role,
-    id: getControlledId(eventKey),
-    'aria-labelledby': getControllerId(eventKey)
-  }), {
-    eventKey,
-    isActive: active == null && key != null ? (0,_SelectableContext__WEBPACK_IMPORTED_MODULE_3__.makeEventKey)(activeKey) === key : active,
-    transition: transition || rest.transition,
-    mountOnEnter: mountOnEnter != null ? mountOnEnter : rest.mountOnEnter,
-    unmountOnExit: unmountOnExit != null ? unmountOnExit : rest.unmountOnExit,
-    onEnter,
-    onEntering,
-    onEntered,
-    onExit,
-    onExiting,
-    onExited
-  }];
-}
-const TabPanel = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef( // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-(_ref2, ref) => {
-  let {
-    as: Component = 'div'
-  } = _ref2,
-      props = _objectWithoutPropertiesLoose(_ref2, _excluded3);
-
-  const [tabPanelProps, {
-    isActive,
-    onEnter,
-    onEntering,
-    onEntered,
-    onExit,
-    onExiting,
-    onExited,
-    mountOnEnter,
-    unmountOnExit,
-    transition: Transition = _NoopTransition__WEBPACK_IMPORTED_MODULE_4__["default"]
-  }] = useTabPanel(props); // We provide an empty the TabContext so `<Nav>`s in `<TabPanel>`s don't
-  // conflict with the top level one.
-
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_TabContext__WEBPACK_IMPORTED_MODULE_2__["default"].Provider, {
-    value: null,
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_SelectableContext__WEBPACK_IMPORTED_MODULE_3__["default"].Provider, {
-      value: null,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Transition, {
-        in: isActive,
-        onEnter: onEnter,
-        onEntering: onEntering,
-        onEntered: onEntered,
-        onExit: onExit,
-        onExiting: onExiting,
-        onExited: onExited,
-        mountOnEnter: mountOnEnter,
-        unmountOnExit: unmountOnExit,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Component, Object.assign({}, tabPanelProps, {
-          ref: ref,
-          hidden: !isActive,
-          "aria-hidden": !isActive
-        }))
-      })
-    })
-  });
-});
-TabPanel.displayName = 'TabPanel';
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TabPanel);
-
-/***/ }),
-
-/***/ "./node_modules/@restart/ui/esm/Tabs.js":
-/*!**********************************************!*\
-  !*** ./node_modules/@restart/ui/esm/Tabs.js ***!
-  \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var uncontrollable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! uncontrollable */ "./node_modules/uncontrollable/lib/esm/index.js");
-/* harmony import */ var _ssr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ssr */ "./node_modules/@react-aria/ssr/dist/module.js");
-/* harmony import */ var _TabContext__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./TabContext */ "./node_modules/@restart/ui/esm/TabContext.js");
-/* harmony import */ var _SelectableContext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./SelectableContext */ "./node_modules/@restart/ui/esm/SelectableContext.js");
-/* harmony import */ var _TabPanel__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./TabPanel */ "./node_modules/@restart/ui/esm/TabPanel.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-
-
-
-
-
-
-
-const Tabs = props => {
-  const {
-    id: userId,
-    generateChildId: generateCustomChildId,
-    onSelect: propsOnSelect,
-    activeKey: propsActiveKey,
-    defaultActiveKey,
-    transition,
-    mountOnEnter,
-    unmountOnExit,
-    children
-  } = props;
-  const [activeKey, onSelect] = (0,uncontrollable__WEBPACK_IMPORTED_MODULE_1__.useUncontrolledProp)(propsActiveKey, defaultActiveKey, propsOnSelect);
-  const id = (0,_ssr__WEBPACK_IMPORTED_MODULE_3__.useSSRSafeId)(userId);
-  const generateChildId = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => generateCustomChildId || ((key, type) => id ? `${id}-${type}-${key}` : null), [id, generateCustomChildId]);
-  const tabContext = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => ({
-    onSelect,
-    activeKey,
-    transition,
-    mountOnEnter: mountOnEnter || false,
-    unmountOnExit: unmountOnExit || false,
-    getControlledId: key => generateChildId(key, 'tabpane'),
-    getControllerId: key => generateChildId(key, 'tab')
-  }), [onSelect, activeKey, transition, mountOnEnter, unmountOnExit, generateChildId]);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_TabContext__WEBPACK_IMPORTED_MODULE_4__["default"].Provider, {
-    value: tabContext,
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_SelectableContext__WEBPACK_IMPORTED_MODULE_5__["default"].Provider, {
-      value: onSelect || null,
-      children: children
-    })
-  });
-};
-
-Tabs.Panel = _TabPanel__WEBPACK_IMPORTED_MODULE_6__["default"];
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Tabs);
 
 /***/ }),
 
@@ -6674,17 +6426,308 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var _page_HomePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../page/HomePage */ "./resources/page/HomePage.js");
-/* harmony import */ var _css_app_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../css/app.css */ "./resources/css/app.css");
-/* harmony import */ var _page_ShopPage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../page/ShopPage */ "./resources/page/ShopPage.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _js_components_HomePage_OnSale__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../js/components/HomePage/OnSale */ "./resources/js/components/HomePage/OnSale.jsx");
+/* harmony import */ var _css_app_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../css/app.css */ "./resources/css/app.css");
+/* harmony import */ var _page_ShopPage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../page/ShopPage */ "./resources/page/ShopPage.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
-//import OnSale from '../js/components/HomePage/OnSale';
 
 
 
-react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_page_ShopPage__WEBPACK_IMPORTED_MODULE_4__["default"], {}), document.getElementById('root'));
+
+react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_page_ShopPage__WEBPACK_IMPORTED_MODULE_5__["default"], {}), document.getElementById('root'));
+
+/***/ }),
+
+/***/ "./resources/js/components/HomePage/OnSale.jsx":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/HomePage/OnSale.jsx ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _assets_bookcover_book1_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../assets/bookcover/book1.jpg */ "./resources/assets/bookcover/book1.jpg");
+/* harmony import */ var react_bootstrap_Carousel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap/Carousel */ "./node_modules/react-bootstrap/esm/Carousel.js");
+/* harmony import */ var react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap/Card */ "./node_modules/react-bootstrap/esm/Card.js");
+/* harmony import */ var react_bootstrap_CardGroup__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap/CardGroup */ "./node_modules/react-bootstrap/esm/CardGroup.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+//import Button from 'react-bootstrap/Button';
+//import Form from 'react-bootstrap/Form';
+
+
+
+
+
+//import Button from "react-bootstrap/Button";
+//import { Container } from "react-bootstrap";
+//import Slider from "react-slick";
+
+
+var OnSale = /*#__PURE__*/function (_Component) {
+  _inherits(OnSale, _Component);
+  var _super = _createSuper(OnSale);
+  function OnSale() {
+    _classCallCheck(this, OnSale);
+    return _super.apply(this, arguments);
+  }
+  _createClass(OnSale, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        className: "",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "mt-4",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "wrapper",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h2", {
+              children: "On Sale"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+              className: "right-button",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("a", {
+                className: "btn btn-secondary",
+                href: "/",
+                children: ["View All ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+                  "class": "fa-solid fa-caret-right"
+                })]
+              })
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Carousel__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            variant: "dark",
+            className: " border border-2 rounded",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Carousel__WEBPACK_IMPORTED_MODULE_3__["default"].Item, {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_CardGroup__WEBPACK_IMPORTED_MODULE_4__["default"], {
+                className: "box",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Img, {
+                    variant: "top",
+                    src: _assets_bookcover_book1_jpg__WEBPACK_IMPORTED_MODULE_1__["default"]
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Body, {
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Title, {
+                      children: "Name Book"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Text, {
+                      children: "Author Name"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Footer, {})]
+                  })]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Img, {
+                    variant: "top",
+                    src: _assets_bookcover_book1_jpg__WEBPACK_IMPORTED_MODULE_1__["default"]
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Body, {
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Title, {
+                      children: "Name Book"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Text, {
+                      children: "Author Name"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Footer, {})]
+                  })]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Img, {
+                    variant: "top",
+                    src: _assets_bookcover_book1_jpg__WEBPACK_IMPORTED_MODULE_1__["default"]
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Body, {
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Title, {
+                      children: "Name Book"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Text, {
+                      children: "Author Name"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Footer, {})]
+                  })]
+                })]
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Carousel__WEBPACK_IMPORTED_MODULE_3__["default"].Item, {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_CardGroup__WEBPACK_IMPORTED_MODULE_4__["default"], {
+                className: "box",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Img, {
+                    variant: "top",
+                    src: _assets_bookcover_book1_jpg__WEBPACK_IMPORTED_MODULE_1__["default"]
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Body, {
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Title, {
+                      children: "Name Book"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Text, {
+                      children: "Author Name"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Footer, {
+                      children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("del", {
+                        children: "$Original"
+                      }), " Price "]
+                    })]
+                  })]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Img, {
+                    variant: "top",
+                    src: _assets_bookcover_book1_jpg__WEBPACK_IMPORTED_MODULE_1__["default"]
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Body, {
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Title, {
+                      children: "Name Book"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Text, {
+                      children: "Author Name"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Footer, {
+                      children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("del", {
+                        children: "$Original"
+                      }), " Price "]
+                    })]
+                  })]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Img, {
+                    variant: "top",
+                    src: _assets_bookcover_book1_jpg__WEBPACK_IMPORTED_MODULE_1__["default"]
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Body, {
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Title, {
+                      children: "Name Book"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Text, {
+                      children: "Author Name"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Footer, {
+                      children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("del", {
+                        children: "$Original"
+                      }), " Price "]
+                    })]
+                  })]
+                })]
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Carousel__WEBPACK_IMPORTED_MODULE_3__["default"].Item, {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_CardGroup__WEBPACK_IMPORTED_MODULE_4__["default"], {
+                className: "box",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Img, {
+                    variant: "top",
+                    src: _assets_bookcover_book1_jpg__WEBPACK_IMPORTED_MODULE_1__["default"]
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Body, {
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Title, {
+                      children: "Name Book"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Text, {
+                      children: "Author Name"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Footer, {
+                      children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("del", {
+                        children: "$Original"
+                      }), " Price "]
+                    })]
+                  })]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Img, {
+                    variant: "top",
+                    src: _assets_bookcover_book1_jpg__WEBPACK_IMPORTED_MODULE_1__["default"]
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Body, {
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Title, {
+                      children: "Name Book"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Text, {
+                      children: "Author Name"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Footer, {
+                      children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("del", {
+                        children: "$Original"
+                      }), " Price "]
+                    })]
+                  })]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Img, {
+                    variant: "top",
+                    src: _assets_bookcover_book1_jpg__WEBPACK_IMPORTED_MODULE_1__["default"]
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Body, {
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Title, {
+                      children: "Name Book"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Text, {
+                      children: "Author Name"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Footer, {
+                      children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("del", {
+                        children: "$Original"
+                      }), " Price "]
+                    })]
+                  })]
+                })]
+              })
+            })]
+          })]
+        })
+      });
+    }
+  }]);
+  return OnSale;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OnSale);
+
+/***/ }),
+
+/***/ "./resources/js/components/ShopPage/BtnSort.jsx":
+/*!******************************************************!*\
+  !*** ./resources/js/components/ShopPage/BtnSort.jsx ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ BtnSort)
+/* harmony export */ });
+/* harmony import */ var react_bootstrap_ButtonGroup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap/ButtonGroup */ "./node_modules/react-bootstrap/esm/ButtonGroup.js");
+/* harmony import */ var react_bootstrap_Dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap/Dropdown */ "./node_modules/react-bootstrap/esm/Dropdown.js");
+/* harmony import */ var react_bootstrap_DropdownButton__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap/DropdownButton */ "./node_modules/react-bootstrap/esm/DropdownButton.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+//import { Col,Row } from 'react-bootstrap';
+
+
+
+//import SplitButton from 'react-bootstrap/SplitButton';
+
+
+function BtnSort() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+    children: [[react_bootstrap_DropdownButton__WEBPACK_IMPORTED_MODULE_1__["default"]].map(function (DropdownType, idx) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(DropdownType, {
+        as: react_bootstrap_ButtonGroup__WEBPACK_IMPORTED_MODULE_2__["default"],
+        id: "dropdown-button-drop-".concat(idx),
+        size: "sm",
+        variant: "secondary",
+        title: "Sort by on sale",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap_Dropdown__WEBPACK_IMPORTED_MODULE_3__["default"].Item, {
+          eventKey: "1",
+          children: "Sort by on sale"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap_Dropdown__WEBPACK_IMPORTED_MODULE_3__["default"].Item, {
+          eventKey: "2",
+          children: "Sort by popular"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap_Dropdown__WEBPACK_IMPORTED_MODULE_3__["default"].Item, {
+          eventKey: "3",
+          children: "Sort by price: low to high"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap_Dropdown__WEBPACK_IMPORTED_MODULE_3__["default"].Item, {
+          eventKey: "4",
+          children: "Sort by price: high to low"
+        })]
+      }, idx);
+    }), [react_bootstrap_DropdownButton__WEBPACK_IMPORTED_MODULE_1__["default"]].map(function (DropdownType, idx) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(DropdownType, {
+        as: react_bootstrap_ButtonGroup__WEBPACK_IMPORTED_MODULE_2__["default"],
+        id: "dropdown-button-drop-".concat(idx),
+        size: "sm",
+        variant: "secondary",
+        title: "Show 20 ",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap_Dropdown__WEBPACK_IMPORTED_MODULE_3__["default"].Item, {
+          eventKey: "1",
+          children: "20"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap_Dropdown__WEBPACK_IMPORTED_MODULE_3__["default"].Item, {
+          eventKey: "2",
+          children: "50"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap_Dropdown__WEBPACK_IMPORTED_MODULE_3__["default"].Item, {
+          eventKey: "3",
+          children: "100"
+        })]
+      }, idx);
+    })]
+  });
+}
 
 /***/ }),
 
@@ -6812,12 +6855,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Row.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Col.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Row.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Col.js");
 /* harmony import */ var _FilterShop__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FilterShop */ "./resources/js/components/ShopPage/FilterShop.jsx");
-/* harmony import */ var react_bootstrap_NavDropdown__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-bootstrap/NavDropdown */ "./node_modules/react-bootstrap/esm/NavDropdown.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _BtnSort__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BtnSort */ "./resources/js/components/ShopPage/BtnSort.jsx");
+/* harmony import */ var _listBooks_ListBooks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../listBooks/ListBooks */ "./resources/js/components/listBooks/ListBooks.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -6831,6 +6875,8 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
+
+//import NavDropdown from "react-bootstrap/NavDropdown";
 
 
 
@@ -6846,40 +6892,43 @@ var ShopPageBody = /*#__PURE__*/function (_Component) {
   _createClass(ShopPageBody, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["default"], {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], {
-              md: 2,
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_FilterShop__WEBPACK_IMPORTED_MODULE_1__["default"], {})
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], {
-              md: 2,
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
-                children: "Showing 1-12 of 125 books"
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], {
-              className: "justify-content-md-center",
-              sm: 4,
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_NavDropdown__WEBPACK_IMPORTED_MODULE_6__["default"], {
-                className: "border d-flex",
-                title: "Dropdown",
-                id: "nav-dropdown",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_NavDropdown__WEBPACK_IMPORTED_MODULE_6__["default"].Item, {
-                  eventKey: "4.1",
-                  children: "Action"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_NavDropdown__WEBPACK_IMPORTED_MODULE_6__["default"].Item, {
-                  eventKey: "4.2",
-                  children: "Another action"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_NavDropdown__WEBPACK_IMPORTED_MODULE_6__["default"].Item, {
-                  eventKey: "4.3",
-                  children: "Something else here"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_NavDropdown__WEBPACK_IMPORTED_MODULE_6__["default"].Divider, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_NavDropdown__WEBPACK_IMPORTED_MODULE_6__["default"].Item, {
-                  eventKey: "4.4",
-                  children: "Separated link"
-                })]
-              })
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+            className: "border-bottom border-4 border-dark",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h1", {
+              className: "d-inline",
+              children: "Books"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h3", {
+              className: "fw-light d-inline",
+              children: "(Filter by Category#1)"
             })]
-          })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
+            className: "mt-5",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"], {
+              md: 2,
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_FilterShop__WEBPACK_IMPORTED_MODULE_1__["default"], {})
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"], {
+              md: 10,
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"], {
+                  md: 2,
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                    className: "fs-2 boil",
+                    children: "Books"
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"], {
+                  md: 10,
+                  className: "text-end",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_BtnSort__WEBPACK_IMPORTED_MODULE_2__["default"], {})
+                  })
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("di", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_listBooks_ListBooks__WEBPACK_IMPORTED_MODULE_3__["default"], {})
+              })]
+            })]
+          })]
         })
       });
     }
@@ -7014,10 +7063,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_bootstrap_Tab__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap/Tab */ "./node_modules/react-bootstrap/esm/Tab.js");
-/* harmony import */ var react_bootstrap_Tabs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap/Tabs */ "./node_modules/react-bootstrap/esm/Tabs.js");
-/* harmony import */ var _listBooks_ListBooks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../listBooks/ListBooks */ "./resources/js/components/listBooks/ListBooks.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Button.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -7031,7 +7078,9 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
-
+//import Tab from 'react-bootstrap/Tab';
+//import Tabs from 'react-bootstrap/Tabs';
+//import ListBooks from "../listBooks/ListBooks";
 
 
 
@@ -7045,18 +7094,19 @@ var FearturedBooks = /*#__PURE__*/function (_Component) {
   _createClass(FearturedBooks, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Tabs__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        defaultActiveKey: "profile",
-        id: "uncontrolled-tab-example",
-        className: "mb-3",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Tab__WEBPACK_IMPORTED_MODULE_4__["default"], {
-          eventKey: "recommended",
-          title: "Recommended",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_listBooks_ListBooks__WEBPACK_IMPORTED_MODULE_1__["default"], {})
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Tab__WEBPACK_IMPORTED_MODULE_4__["default"], {
-          eventKey: "popular",
-          title: "Popular",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_listBooks_ListBooks__WEBPACK_IMPORTED_MODULE_1__["default"], {})
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "d-inline mx-2",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["default"], {
+            variant: "secondary",
+            children: "Recommended"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "d-inline mx-2",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["default"], {
+            variant: "secondary",
+            children: "Popular"
+          })
         })]
       });
     }
@@ -7107,7 +7157,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 //import Slider from "react-slick";
 
 
-
 var OnSale = /*#__PURE__*/function (_Component) {
   _inherits(OnSale, _Component);
   var _super = _createSuper(OnSale);
@@ -7118,7 +7167,8 @@ var OnSale = /*#__PURE__*/function (_Component) {
   _createClass(OnSale, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        className: "",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
           className: "mt-4",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
@@ -7137,8 +7187,10 @@ var OnSale = /*#__PURE__*/function (_Component) {
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Carousel__WEBPACK_IMPORTED_MODULE_3__["default"], {
             variant: "dark",
+            className: " border border-2 rounded",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Carousel__WEBPACK_IMPORTED_MODULE_3__["default"].Item, {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_CardGroup__WEBPACK_IMPORTED_MODULE_4__["default"], {
+                className: "box",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Img, {
                     variant: "top",
@@ -7176,6 +7228,7 @@ var OnSale = /*#__PURE__*/function (_Component) {
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Carousel__WEBPACK_IMPORTED_MODULE_3__["default"].Item, {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_CardGroup__WEBPACK_IMPORTED_MODULE_4__["default"], {
+                className: "box",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Img, {
                     variant: "top",
@@ -7225,6 +7278,7 @@ var OnSale = /*#__PURE__*/function (_Component) {
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Carousel__WEBPACK_IMPORTED_MODULE_3__["default"].Item, {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_CardGroup__WEBPACK_IMPORTED_MODULE_4__["default"], {
+                className: "box",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_5__["default"].Img, {
                     variant: "top",
@@ -7355,9 +7409,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_components_header_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../js/components/header/header */ "./resources/js/components/header/header.jsx");
 /* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
 /* harmony import */ var _js_components_homepage_OnSale__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../js/components/homepage/OnSale */ "./resources/js/components/homepage/OnSale.jsx");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Row.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Col.js");
 /* harmony import */ var _js_components_homepage_FeaturedBooks__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../js/components/homepage/FeaturedBooks */ "./resources/js/components/homepage/FeaturedBooks.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _js_components_listBooks_ListBooks__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../js/components/listBooks/ListBooks */ "./resources/js/components/listBooks/ListBooks.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -7369,6 +7426,7 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
 
 
 
@@ -7391,11 +7449,22 @@ var HomePage = /*#__PURE__*/function (_Component) {
   _createClass(HomePage, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.Fragment, {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_js_components_header_header__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"], {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_js_components_homepage_OnSale__WEBPACK_IMPORTED_MODULE_4__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-            className: "text-center",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_js_components_homepage_FeaturedBooks__WEBPACK_IMPORTED_MODULE_5__["default"], {})
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_js_components_header_header__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["default"], {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_js_components_homepage_OnSale__WEBPACK_IMPORTED_MODULE_4__["default"], {})
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["default"], {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["default"], {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
+              xs: 5,
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+                div: true,
+                className: "mt-5",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_js_components_homepage_FeaturedBooks__WEBPACK_IMPORTED_MODULE_5__["default"], {})
+              })
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+            className: "border mt-5 h-100 w-200",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_js_components_listBooks_ListBooks__WEBPACK_IMPORTED_MODULE_6__["default"], {})
           })]
         })]
       });
@@ -7572,7 +7641,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".wrapper{\n    display: flex;\n}\n\n.right-button{\n    margin-left: auto;\n}\n.carousel-indicators{\n    display: none !important;\n}\n.accordion-button:not(.collapsed)\n{\n    display: inline;\n    color: black !important;\n    background-color: white !important;\n}\n.accordion-button:after(.collapsed){\n    display: inline !important;\n\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".wrapper{\n    display: flex;\n}\n\n.right-button{\n    margin-left: auto;\n}\n.carousel-indicators{\n    display: none !important;\n}\n.accordion-button:not(.collapsed)\n{\n    display: inline;\n    color: black !important;\n    background-color: white !important;\n}\n.accordion-button:after(.collapsed){\n    display: inline !important;\n\n}\n.box{\n    padding-left: 150px;\n    padding-right: 150px;\n    height: 580px;\n}\n.fearturebook\n{\n    height: 300px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10016,6 +10085,53 @@ Button.defaultProps = defaultProps;
 
 /***/ }),
 
+/***/ "./node_modules/react-bootstrap/esm/ButtonGroup.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/react-bootstrap/esm/ButtonGroup.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/esm/ThemeProvider.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+const defaultProps = {
+  vertical: false,
+  role: 'group'
+};
+const ButtonGroup = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(({
+  bsPrefix,
+  size,
+  vertical,
+  className,
+  // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+  as: Component = 'div',
+  ...rest
+}, ref) => {
+  const prefix = (0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_3__.useBootstrapPrefix)(bsPrefix, 'btn-group');
+  let baseClass = prefix;
+  if (vertical) baseClass = `${prefix}-vertical`;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Component, { ...rest,
+    ref: ref,
+    className: classnames__WEBPACK_IMPORTED_MODULE_0___default()(className, baseClass, size && `${prefix}-${size}`)
+  });
+});
+ButtonGroup.displayName = 'ButtonGroup';
+ButtonGroup.defaultProps = defaultProps;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ButtonGroup);
+
+/***/ }),
+
 /***/ "./node_modules/react-bootstrap/esm/Card.js":
 /*!**************************************************!*\
   !*** ./node_modules/react-bootstrap/esm/Card.js ***!
@@ -11109,6 +11225,148 @@ Dropdown.defaultProps = defaultProps;
 
 /***/ }),
 
+/***/ "./node_modules/react-bootstrap/esm/DropdownButton.js":
+/*!************************************************************!*\
+  !*** ./node_modules/react-bootstrap/esm/DropdownButton.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Dropdown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Dropdown */ "./node_modules/react-bootstrap/esm/Dropdown.js");
+/* harmony import */ var _DropdownToggle__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./DropdownToggle */ "./node_modules/react-bootstrap/esm/DropdownToggle.js");
+/* harmony import */ var _DropdownMenu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./DropdownMenu */ "./node_modules/react-bootstrap/esm/DropdownMenu.js");
+/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./types */ "./node_modules/react-bootstrap/esm/types.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+
+const propTypes = {
+  /**
+   * An html id attribute for the Toggle button, necessary for assistive technologies, such as screen readers.
+   * @type {string}
+   */
+  id: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
+
+  /** An `href` passed to the Toggle component */
+  href: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
+
+  /** An `onClick` handler passed to the Toggle component */
+  onClick: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().func),
+
+  /** The content of the non-toggle Button.  */
+  title: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().node.isRequired),
+
+  /** Disables both Buttons  */
+  disabled: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool),
+
+  /**
+   * Aligns the dropdown menu.
+   *
+   * _see [DropdownMenu](#dropdown-menu-props) for more details_
+   *
+   * @type {"start"|"end"|{ sm: "start"|"end" }|{ md: "start"|"end" }|{ lg: "start"|"end" }|{ xl: "start"|"end"}|{ xxl: "start"|"end"} }
+   */
+  align: _types__WEBPACK_IMPORTED_MODULE_3__.alignPropType,
+
+  /** An ARIA accessible role applied to the Menu component. When set to 'menu', The dropdown */
+  menuRole: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
+
+  /** Whether to render the dropdown menu in the DOM before the first time it is shown */
+  renderMenuOnMount: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool),
+
+  /**
+   *  Which event when fired outside the component will cause it to be closed.
+   *
+   * _see [DropdownMenu](#dropdown-menu-props) for more details_
+   */
+  rootCloseEvent: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
+
+  /**
+   * Menu color variant.
+   *
+   * Omitting this will use the default light color.
+   */
+  menuVariant: prop_types__WEBPACK_IMPORTED_MODULE_2___default().oneOf(['dark']),
+
+  /**
+   * Allow Dropdown to flip in case of an overlapping on the reference element. For more information refer to
+   * Popper.js's flip [docs](https://popper.js.org/docs/v2/modifiers/flip/).
+   *
+   */
+  flip: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool),
+
+  /** @ignore */
+  bsPrefix: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
+
+  /** @ignore */
+  variant: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
+
+  /** @ignore */
+  size: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string)
+};
+/**
+ * A convenience component for simple or general use dropdowns. Renders a `Button` toggle and all `children`
+ * are passed directly to the default `Dropdown.Menu`. This component accepts all of
+ * [`Dropdown`'s props](#dropdown-props).
+ *
+ * _All unknown props are passed through to the `Dropdown` component._ Only
+ * the Button `variant`, `size` and `bsPrefix` props are passed to the toggle,
+ * along with menu-related props are passed to the `Dropdown.Menu`
+ */
+
+const DropdownButton = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(({
+  title,
+  children,
+  bsPrefix,
+  rootCloseEvent,
+  variant,
+  size,
+  menuRole,
+  renderMenuOnMount,
+  disabled,
+  href,
+  id,
+  menuVariant,
+  flip,
+  ...props
+}, ref) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_Dropdown__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  ref: ref,
+  ...props,
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_DropdownToggle__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    id: id,
+    href: href,
+    size: size,
+    variant: variant,
+    disabled: disabled,
+    childBsPrefix: bsPrefix,
+    children: title
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_DropdownMenu__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    role: menuRole,
+    renderOnMount: renderMenuOnMount,
+    rootCloseEvent: rootCloseEvent,
+    variant: menuVariant,
+    flip: flip,
+    children: children
+  })]
+}));
+DropdownButton.displayName = 'DropdownButton';
+DropdownButton.propTypes = propTypes;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DropdownButton);
+
+/***/ }),
+
 /***/ "./node_modules/react-bootstrap/esm/DropdownContext.js":
 /*!*************************************************************!*\
   !*** ./node_modules/react-bootstrap/esm/DropdownContext.js ***!
@@ -11658,78 +11916,6 @@ Nav.defaultProps = defaultProps;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Object.assign(Nav, {
   Item: _NavItem__WEBPACK_IMPORTED_MODULE_9__["default"],
   Link: _NavLink__WEBPACK_IMPORTED_MODULE_10__["default"]
-}));
-
-/***/ }),
-
-/***/ "./node_modules/react-bootstrap/esm/NavDropdown.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/react-bootstrap/esm/NavDropdown.js ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/esm/ThemeProvider.js");
-/* harmony import */ var _Dropdown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Dropdown */ "./node_modules/react-bootstrap/esm/Dropdown.js");
-/* harmony import */ var _NavLink__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./NavLink */ "./node_modules/react-bootstrap/esm/NavLink.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-
-
-
-
-
-const NavDropdown = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(({
-  id,
-  title,
-  children,
-  bsPrefix,
-  className,
-  rootCloseEvent,
-  menuRole,
-  disabled,
-  active,
-  renderMenuOnMount,
-  menuVariant,
-  ...props
-}, ref) => {
-  /* NavItem has no additional logic, it's purely presentational. Can set nav item class here to support "as" */
-  const navItemPrefix = (0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_3__.useBootstrapPrefix)(undefined, 'nav-item');
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_Dropdown__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    ref: ref,
-    ...props,
-    className: classnames__WEBPACK_IMPORTED_MODULE_0___default()(className, navItemPrefix),
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Dropdown__WEBPACK_IMPORTED_MODULE_4__["default"].Toggle, {
-      id: id,
-      eventKey: null,
-      active: active,
-      disabled: disabled,
-      childBsPrefix: bsPrefix,
-      as: _NavLink__WEBPACK_IMPORTED_MODULE_5__["default"],
-      children: title
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Dropdown__WEBPACK_IMPORTED_MODULE_4__["default"].Menu, {
-      role: menuRole,
-      renderOnMount: renderMenuOnMount,
-      rootCloseEvent: rootCloseEvent,
-      variant: menuVariant,
-      children: children
-    })]
-  });
-});
-NavDropdown.displayName = 'NavDropdown';
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Object.assign(NavDropdown, {
-  Item: _Dropdown__WEBPACK_IMPORTED_MODULE_4__["default"].Item,
-  ItemText: _Dropdown__WEBPACK_IMPORTED_MODULE_4__["default"].ItemText,
-  Divider: _Dropdown__WEBPACK_IMPORTED_MODULE_4__["default"].Divider,
-  Header: _Dropdown__WEBPACK_IMPORTED_MODULE_4__["default"].Header
 }));
 
 /***/ }),
@@ -12518,330 +12704,6 @@ Row.displayName = 'Row';
 
 /***/ }),
 
-/***/ "./node_modules/react-bootstrap/esm/Tab.js":
-/*!*************************************************!*\
-  !*** ./node_modules/react-bootstrap/esm/Tab.js ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _TabContainer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./TabContainer */ "./node_modules/react-bootstrap/esm/TabContainer.js");
-/* harmony import */ var _TabContent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./TabContent */ "./node_modules/react-bootstrap/esm/TabContent.js");
-/* harmony import */ var _TabPane__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./TabPane */ "./node_modules/react-bootstrap/esm/TabPane.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-
-
-
-
-
-
-/* eslint-disable react/no-unused-prop-types */
-const propTypes = {
-  eventKey: prop_types__WEBPACK_IMPORTED_MODULE_2___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_2___default().string), (prop_types__WEBPACK_IMPORTED_MODULE_2___default().number)]),
-
-  /**
-   * Content for the tab title.
-   */
-  title: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().node.isRequired),
-
-  /**
-   * The disabled state of the tab.
-   */
-  disabled: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool),
-
-  /**
-   * Class to pass to the underlying nav link.
-   */
-  tabClassName: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
-
-  /**
-   * Object containing attributes to pass to underlying nav link.
-   */
-  tabAttrs: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().object)
-};
-
-const Tab = () => {
-  throw new Error('ReactBootstrap: The `Tab` component is not meant to be rendered! ' + "It's an abstract component that is only valid as a direct Child of the `Tabs` Component. " + 'For custom tabs components use TabPane and TabsContainer directly'); // Needed otherwise docs error out.
-
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {});
-};
-
-Tab.propTypes = propTypes;
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Object.assign(Tab, {
-  Container: _TabContainer__WEBPACK_IMPORTED_MODULE_3__["default"],
-  Content: _TabContent__WEBPACK_IMPORTED_MODULE_4__["default"],
-  Pane: _TabPane__WEBPACK_IMPORTED_MODULE_5__["default"]
-}));
-
-/***/ }),
-
-/***/ "./node_modules/react-bootstrap/esm/TabContainer.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/react-bootstrap/esm/TabContainer.js ***!
-  \**********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _restart_ui_Tabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @restart/ui/Tabs */ "./node_modules/@restart/ui/esm/Tabs.js");
-/* harmony import */ var _getTabTransitionComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./getTabTransitionComponent */ "./node_modules/react-bootstrap/esm/getTabTransitionComponent.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-
-
-
-const TabContainer = ({
-  transition,
-  ...props
-}) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_restart_ui_Tabs__WEBPACK_IMPORTED_MODULE_2__["default"], { ...props,
-  transition: (0,_getTabTransitionComponent__WEBPACK_IMPORTED_MODULE_3__["default"])(transition)
-});
-
-TabContainer.displayName = 'TabContainer';
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TabContainer);
-
-/***/ }),
-
-/***/ "./node_modules/react-bootstrap/esm/TabContent.js":
-/*!********************************************************!*\
-  !*** ./node_modules/react-bootstrap/esm/TabContent.js ***!
-  \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _createWithBsPrefix__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createWithBsPrefix */ "./node_modules/react-bootstrap/esm/createWithBsPrefix.js");
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_0__["default"])('tab-content'));
-
-/***/ }),
-
-/***/ "./node_modules/react-bootstrap/esm/TabPane.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/react-bootstrap/esm/TabPane.js ***!
-  \*****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _restart_ui_SelectableContext__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @restart/ui/SelectableContext */ "./node_modules/@restart/ui/esm/SelectableContext.js");
-/* harmony import */ var _restart_ui_TabContext__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @restart/ui/TabContext */ "./node_modules/@restart/ui/esm/TabContext.js");
-/* harmony import */ var _restart_ui_TabPanel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @restart/ui/TabPanel */ "./node_modules/@restart/ui/esm/TabPanel.js");
-/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/esm/ThemeProvider.js");
-/* harmony import */ var _Fade__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Fade */ "./node_modules/react-bootstrap/esm/Fade.js");
-/* harmony import */ var _getTabTransitionComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./getTabTransitionComponent */ "./node_modules/react-bootstrap/esm/getTabTransitionComponent.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-
-
-
-
-
-
-
-const TabPane = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(({
-  bsPrefix,
-  transition,
-  ...props
-}, ref) => {
-  const [{
-    className,
-    // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-    as: Component = 'div',
-    ...rest
-  }, {
-    isActive,
-    onEnter,
-    onEntering,
-    onEntered,
-    onExit,
-    onExiting,
-    onExited,
-    mountOnEnter,
-    unmountOnExit,
-    transition: Transition = _Fade__WEBPACK_IMPORTED_MODULE_3__["default"]
-  }] = (0,_restart_ui_TabPanel__WEBPACK_IMPORTED_MODULE_4__.useTabPanel)({ ...props,
-    transition: (0,_getTabTransitionComponent__WEBPACK_IMPORTED_MODULE_5__["default"])(transition)
-  });
-  const prefix = (0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_6__.useBootstrapPrefix)(bsPrefix, 'tab-pane'); // We provide an empty the TabContext so `<Nav>`s in `<TabPanel>`s don't
-  // conflict with the top level one.
-
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_restart_ui_TabContext__WEBPACK_IMPORTED_MODULE_7__["default"].Provider, {
-    value: null,
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_restart_ui_SelectableContext__WEBPACK_IMPORTED_MODULE_8__["default"].Provider, {
-      value: null,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Transition, {
-        in: isActive,
-        onEnter: onEnter,
-        onEntering: onEntering,
-        onEntered: onEntered,
-        onExit: onExit,
-        onExiting: onExiting,
-        onExited: onExited,
-        mountOnEnter: mountOnEnter,
-        unmountOnExit: unmountOnExit,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Component, { ...rest,
-          ref: ref,
-          className: classnames__WEBPACK_IMPORTED_MODULE_0___default()(className, prefix, isActive && 'active')
-        })
-      })
-    })
-  });
-});
-TabPane.displayName = 'TabPane';
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TabPane);
-
-/***/ }),
-
-/***/ "./node_modules/react-bootstrap/esm/Tabs.js":
-/*!**************************************************!*\
-  !*** ./node_modules/react-bootstrap/esm/Tabs.js ***!
-  \**************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var uncontrollable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! uncontrollable */ "./node_modules/uncontrollable/lib/esm/index.js");
-/* harmony import */ var _restart_ui_Tabs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @restart/ui/Tabs */ "./node_modules/@restart/ui/esm/Tabs.js");
-/* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Nav */ "./node_modules/react-bootstrap/esm/Nav.js");
-/* harmony import */ var _NavLink__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./NavLink */ "./node_modules/react-bootstrap/esm/NavLink.js");
-/* harmony import */ var _NavItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./NavItem */ "./node_modules/react-bootstrap/esm/NavItem.js");
-/* harmony import */ var _TabContent__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./TabContent */ "./node_modules/react-bootstrap/esm/TabContent.js");
-/* harmony import */ var _TabPane__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./TabPane */ "./node_modules/react-bootstrap/esm/TabPane.js");
-/* harmony import */ var _ElementChildren__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ElementChildren */ "./node_modules/react-bootstrap/esm/ElementChildren.js");
-/* harmony import */ var _getTabTransitionComponent__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./getTabTransitionComponent */ "./node_modules/react-bootstrap/esm/getTabTransitionComponent.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-
-
-
-
-
-
-
-
-
-
-const defaultProps = {
-  variant: 'tabs',
-  mountOnEnter: false,
-  unmountOnExit: false
-};
-
-function getDefaultActiveKey(children) {
-  let defaultActiveKey;
-  (0,_ElementChildren__WEBPACK_IMPORTED_MODULE_3__.forEach)(children, child => {
-    if (defaultActiveKey == null) {
-      defaultActiveKey = child.props.eventKey;
-    }
-  });
-  return defaultActiveKey;
-}
-
-function renderTab(child) {
-  const {
-    title,
-    eventKey,
-    disabled,
-    tabClassName,
-    tabAttrs,
-    id
-  } = child.props;
-
-  if (title == null) {
-    return null;
-  }
-
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_NavItem__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    as: "li",
-    role: "presentation",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_NavLink__WEBPACK_IMPORTED_MODULE_5__["default"], {
-      as: "button",
-      type: "button",
-      eventKey: eventKey,
-      disabled: disabled,
-      id: id,
-      className: tabClassName,
-      ...tabAttrs,
-      children: title
-    })
-  });
-}
-
-const Tabs = props => {
-  const {
-    id,
-    onSelect,
-    transition,
-    mountOnEnter,
-    unmountOnExit,
-    children,
-    activeKey = getDefaultActiveKey(children),
-    ...controlledProps
-  } = (0,uncontrollable__WEBPACK_IMPORTED_MODULE_1__.useUncontrolled)(props, {
-    activeKey: 'onSelect'
-  });
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_restart_ui_Tabs__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    id: id,
-    activeKey: activeKey,
-    onSelect: onSelect,
-    transition: (0,_getTabTransitionComponent__WEBPACK_IMPORTED_MODULE_7__["default"])(transition),
-    mountOnEnter: mountOnEnter,
-    unmountOnExit: unmountOnExit,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Nav__WEBPACK_IMPORTED_MODULE_8__["default"], { ...controlledProps,
-      role: "tablist",
-      as: "ul",
-      children: (0,_ElementChildren__WEBPACK_IMPORTED_MODULE_3__.map)(children, renderTab)
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_TabContent__WEBPACK_IMPORTED_MODULE_9__["default"], {
-      children: (0,_ElementChildren__WEBPACK_IMPORTED_MODULE_3__.map)(children, child => {
-        const childProps = { ...child.props
-        };
-        delete childProps.title;
-        delete childProps.disabled;
-        delete childProps.tabClassName;
-        delete childProps.tabAttrs;
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_TabPane__WEBPACK_IMPORTED_MODULE_10__["default"], { ...childProps
-        });
-      })
-    })]
-  });
-};
-
-Tabs.defaultProps = defaultProps;
-Tabs.displayName = 'Tabs';
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Tabs);
-
-/***/ }),
-
 /***/ "./node_modules/react-bootstrap/esm/ThemeProvider.js":
 /*!***********************************************************!*\
   !*** ./node_modules/react-bootstrap/esm/ThemeProvider.js ***!
@@ -13146,31 +13008,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/react-bootstrap/esm/getTabTransitionComponent.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/react-bootstrap/esm/getTabTransitionComponent.js ***!
-  \***********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ getTabTransitionComponent)
-/* harmony export */ });
-/* harmony import */ var _restart_ui_NoopTransition__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @restart/ui/NoopTransition */ "./node_modules/@restart/ui/esm/NoopTransition.js");
-/* harmony import */ var _Fade__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Fade */ "./node_modules/react-bootstrap/esm/Fade.js");
-
-
-function getTabTransitionComponent(transition) {
-  if (typeof transition === 'boolean') {
-    return transition ? _Fade__WEBPACK_IMPORTED_MODULE_0__["default"] : _restart_ui_NoopTransition__WEBPACK_IMPORTED_MODULE_1__["default"];
-  }
-
-  return transition;
-}
-
-/***/ }),
-
 /***/ "./node_modules/react-bootstrap/esm/safeFindDOMNode.js":
 /*!*************************************************************!*\
   !*** ./node_modules/react-bootstrap/esm/safeFindDOMNode.js ***!
@@ -13246,6 +13083,35 @@ function triggerBrowserReflow(node) {
   // eslint-disable-next-line @typescript-eslint/no-unused-expressions
   node.offsetHeight;
 }
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/esm/types.js":
+/*!***************************************************!*\
+  !*** ./node_modules/react-bootstrap/esm/types.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "alignPropType": () => (/* binding */ alignPropType)
+/* harmony export */ });
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
+
+const alignDirection = prop_types__WEBPACK_IMPORTED_MODULE_0___default().oneOf(['start', 'end']);
+const alignPropType = prop_types__WEBPACK_IMPORTED_MODULE_0___default().oneOfType([alignDirection, prop_types__WEBPACK_IMPORTED_MODULE_0___default().shape({
+  sm: alignDirection
+}), prop_types__WEBPACK_IMPORTED_MODULE_0___default().shape({
+  md: alignDirection
+}), prop_types__WEBPACK_IMPORTED_MODULE_0___default().shape({
+  lg: alignDirection
+}), prop_types__WEBPACK_IMPORTED_MODULE_0___default().shape({
+  xl: alignDirection
+}), prop_types__WEBPACK_IMPORTED_MODULE_0___default().shape({
+  xxl: alignDirection
+}), (prop_types__WEBPACK_IMPORTED_MODULE_0___default().object)]);
 
 /***/ }),
 

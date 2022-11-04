@@ -12,7 +12,7 @@ import CardGroup from "react-bootstrap/CardGroup";
 class OnSale extends Component {
     render() {
         return (
-            <>
+            <div className="">
                 <div className="mt-4">
                     <div className="wrapper">
                         <h2>On Sale</h2>
@@ -23,10 +23,10 @@ class OnSale extends Component {
                         </div>
 
                     </div>
-                    <Carousel variant="dark">
+                    <Carousel variant="dark" className=" border border-2 rounded" >
                         <Carousel.Item >
-                            <CardGroup>
-                            <Card>
+                            <CardGroup className="box">
+                            <Card >
                                 <Card.Img variant="top"  src={imgBook1}/>
                                 <Card.Body>
                                     <Card.Title>
@@ -67,7 +67,7 @@ class OnSale extends Component {
                             </CardGroup>
                         </Carousel.Item>
                         <Carousel.Item >
-                        <CardGroup>
+                        <CardGroup className="box">
                             <Card>
                                 <Card.Img variant="top"  src={imgBook1}/>
                                 <Card.Body>
@@ -103,7 +103,7 @@ class OnSale extends Component {
                             </CardGroup>
                         </Carousel.Item>
                         <Carousel.Item >
-                        <CardGroup>
+                        <CardGroup className="box">
                             <Card>
                                 <Card.Img variant="top"  src={imgBook1}/>
                                 <Card.Body>
@@ -138,7 +138,7 @@ class OnSale extends Component {
                         </Carousel.Item>
                     </Carousel>
                 </div>
-            </>
+            </div>
         );
     }
 }

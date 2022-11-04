@@ -1,37 +1,39 @@
 import { Component } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import FilterShop from "./FilterShop";
-import NavDropdown from "react-bootstrap/NavDropdown";
+//import NavDropdown from "react-bootstrap/NavDropdown";
+import BtnSort from "./BtnSort";
+import ListBooks from "../listBooks/ListBooks";
 class ShopPageBody extends Component {
     render() {
         return (
             <>
                 <Container>
-                    <Row>
+                    <div className="border-bottom border-4 border-dark">
+                        <h1 className="d-inline">Books</h1><h3 className="fw-light d-inline">(Filter by Category#1)</h3>
+                    </div>
+                    <Row className="mt-5">
                         <Col md={2}>
                             <FilterShop />
                         </Col>
-                        <Col md={2}>
-                            <a>Showing 1-12 of 125 books</a>
+                        <Col md={10}>
+                        <Row>
+                            <Col md={2}>
+                                <p className="fs-2 boil">Books</p>
+                            </Col>
+                            <Col md={10} className='text-end'>
+                                <div>
+                                    <BtnSort/>
+                                </div>
+                            </Col>
+                        </Row>
+                        <di>
+                            <ListBooks/>
+                        </di>
                         </Col>
-                        <Col className="justify-content-md-center" sm={4}>
-                        <NavDropdown className="border d-flex" title="Dropdown" id="nav-dropdown" >
-                                <NavDropdown.Item eventKey="4.1">
-                                    Action
-                                </NavDropdown.Item>
-                                <NavDropdown.Item eventKey="4.2">
-                                    Another action
-                                </NavDropdown.Item>
-                                <NavDropdown.Item eventKey="4.3">
-                                    Something else here
-                                </NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item eventKey="4.4">
-                                    Separated link
-                                </NavDropdown.Item>
-                            </NavDropdown>
-                        </Col>
+
                     </Row>
+
                 </Container>
             </>
         );
