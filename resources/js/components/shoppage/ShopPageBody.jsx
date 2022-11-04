@@ -27,9 +27,9 @@ class ShopPageBody extends Component {
                                 </div>
                             </Col>
                         </Row>
-                        <di>
-                            <ListBooks/>
-                        </di>
+                        <div>
+                            
+                        </div>
                         </Col>
 
                     </Row>
