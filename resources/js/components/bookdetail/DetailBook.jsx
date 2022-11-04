@@ -8,7 +8,7 @@ export default function DetailBook() {
         <div className="wrapper-book-detail">
             <div className="img-author">
                 <img src={imgBook1} alt="img-something" />
-                <p>By Author Ana</p>
+                <p>By <b>Author Ana</b></p>
             </div>
             <div className="content-book">
                 <h4>Book title</h4>

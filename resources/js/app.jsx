@@ -9,7 +9,7 @@ import CustomerReview from './components/bookdetail/ListReviews';
 import CartBook from './components/bookdetail/CartBook';
 
 import ReviewsCustomer from './components/bookdetail/ReviewPorts';
-import DetailPage from '../page/DetailPage';
+import DetailPage from '../page/ProductPage';
 
 ReactDOM.render(
 

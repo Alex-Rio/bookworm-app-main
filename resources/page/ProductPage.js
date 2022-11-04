@@ -11,16 +11,16 @@ export default function DetailPage(){
     return(
         <Container>
             <Header/>
-            <div>
-            <div className="border-bottom border-4 border-dark">
-                        <h1 className="d-inline">Category Name</h1>
+            <div style={{paddingRight: 0}} >
+            <div className="pt-5 pb-5 border-bottom border-4 border-dark">
+                        <h1 className="d-inline mt-2">Category Name</h1>
                     </div>
             </div>
-            <div className="row mt-2">
-                <div className=" detailbook col-8 border border-2" >
+            <div className="row mt-2 " style={{marginLeft : 0}}>
+                <div className=" detailbook col-8 border border-2 " >
                     <DetailBook/>
                 </div>
-                <div className="col-4">
+                <div className="col-4 p-0">
                     <CartBook/>
                 </div>
                 <div className="row mt-5">
