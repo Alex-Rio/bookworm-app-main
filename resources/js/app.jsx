@@ -13,7 +13,7 @@ import DetailPage from '../page/ProductPage';
 
 ReactDOM.render(
 
-  <DetailPage/>,
+  <HomePage/>,
 
 
   document.getElementById('root')

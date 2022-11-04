@@ -3,7 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import FilterShop from "./FilterShop";
 //import NavDropdown from "react-bootstrap/NavDropdown";
 import BtnSort from "./BtnSort";
-import ListBooks from "../listBooks/ListBooks";
+//import ListBooks from "../listBooks/ListBooks";
 class ShopPageBody extends Component {
     render() {
         return (
@@ -28,7 +28,7 @@ class ShopPageBody extends Component {
                             </Col>
                         </Row>
                         <div>
-                            
+
                         </div>
                         </Col>
 
