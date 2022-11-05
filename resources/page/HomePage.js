@@ -6,6 +6,8 @@ import OnSale from '../js/components/homepage/OnSale';
 import { Container, Row,Col } from 'react-bootstrap';
 import FearturedBooks from '../js/components/homepage/FeaturedBooks';
 import ListBooks from '../js/components/listBooks/ListBooks';
+import Footer from '../js/components/footer/Footer';
+import Onsalepro from '../js/components/homepage/Onsalepro';
 //import ListBooks from '../js/components/listBooks/ListBooks';
 //import BodyHomePage from '../js/components/HomePage/';
 class HomePage extends Component {
@@ -14,20 +16,21 @@ class HomePage extends Component {
             <>
                 <Header/>
                 <Container>
-                    <OnSale/>
+                    <Onsalepro/>
                 </Container>
                 <Container>
                 <Row>
-                    <Col xs={5}>
-                    <div div className="mt-5">
+                    <Col xs={12} className=''>
+                    <div div className="mt-5 d-flex justify-content-center">
                         <FearturedBooks/>
                     </div>
                     </Col>
                 </Row>
-               <div className='border mt-5 h-100 w-200'>
+               <div className='mt-5 h-100 w-200'>
                <ListBooks></ListBooks>
                </div>
                 </Container>
+                <Footer/>
             </>
       );
     }

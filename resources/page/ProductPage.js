@@ -1,14 +1,16 @@
 import { Col, Container, Row } from "react-bootstrap";
 //import ListBooks from "../js/components/listBooks/ListBooks";
-import ListReviews from "../js/components/bookdetail/ListReviews"
-import CartBook from "../js/components/bookdetail/CartBook";
-import DetailBook from "../js/components/bookdetail/DetailBook";
+import ListReviews from "../js/components/produce/ListReviews"
+//import CartBook from "../js/components/produce/CartBook";
+import DetailBook from "../js/components/produce/DetailBook";
 import Header from "../js/components/header/header";
 import "../css/detailbook.css";
-import ReviewPorts from '../js/components/bookdetail/ReviewPorts'
+import ReviewPorts from '../js/components/produce/ReviewPorts'
+import Footer from "../js/components/footer/Footer";
 
 export default function DetailPage(){
     return(
+       <div>
         <Container>
             <Header/>
             <div style={{paddingRight: 0}} >
@@ -21,7 +23,7 @@ export default function DetailPage(){
                     <DetailBook/>
                 </div>
                 <div className="col-4 p-0">
-                    <CartBook/>
+                    {/* <CartBook/> */}
                 </div>
                 <div className="row mt-5">
                     <div className="col-8 border">
@@ -36,5 +38,7 @@ export default function DetailPage(){
                 </div>
             </div>
         </Container>
+        <Footer/>
+       </div>
     )
 }
