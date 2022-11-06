@@ -6453,17 +6453,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var _page_HomePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../page/HomePage */ "./resources/page/HomePage.js");
-/* harmony import */ var _js_components_HomePage_OnSale__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../js/components/HomePage/OnSale */ "./resources/js/components/HomePage/OnSale.jsx");
-/* harmony import */ var _css_app_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../css/app.css */ "./resources/css/app.css");
-/* harmony import */ var _page_ShopPage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../page/ShopPage */ "./resources/page/ShopPage.js");
-/* harmony import */ var _components_produce_DetailBook__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/produce/DetailBook */ "./resources/js/components/produce/DetailBook.jsx");
-/* harmony import */ var _components_produce_ListReviews__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/produce/ListReviews */ "./resources/js/components/produce/ListReviews.jsx");
-/* harmony import */ var _components_produce_CartBook__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/produce/CartBook */ "./resources/js/components/produce/CartBook.jsx");
-/* harmony import */ var _components_produce_ReviewPorts__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/produce/ReviewPorts */ "./resources/js/components/produce/ReviewPorts.jsx");
-/* harmony import */ var _page_ProductPage__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../page/ProductPage */ "./resources/page/ProductPage.js");
-/* harmony import */ var _page_AboutPage__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../page/AboutPage */ "./resources/page/AboutPage.js");
-/* harmony import */ var _components_produce_BookCard__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/produce/BookCard */ "./resources/js/components/produce/BookCard.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _css_app_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../css/app.css */ "./resources/css/app.css");
+/* harmony import */ var _page_ShopPage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../page/ShopPage */ "./resources/page/ShopPage.js");
+/* harmony import */ var _components_produce_DetailBook__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/produce/DetailBook */ "./resources/js/components/produce/DetailBook.jsx");
+/* harmony import */ var _components_produce_ListReviews__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/produce/ListReviews */ "./resources/js/components/produce/ListReviews.jsx");
+/* harmony import */ var _components_produce_CartBook__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/produce/CartBook */ "./resources/js/components/produce/CartBook.jsx");
+/* harmony import */ var _components_produce_ReviewPorts__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/produce/ReviewPorts */ "./resources/js/components/produce/ReviewPorts.jsx");
+/* harmony import */ var _page_ProductPage__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../page/ProductPage */ "./resources/page/ProductPage.js");
+/* harmony import */ var _page_AboutPage__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../page/AboutPage */ "./resources/page/AboutPage.js");
+/* harmony import */ var _components_produce_BookCard__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/produce/BookCard */ "./resources/js/components/produce/BookCard.jsx");
+/* harmony import */ var _components_cartpage_CartProduce__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/cartpage/CartProduce */ "./resources/js/components/cartpage/CartProduce.jsx");
+/* harmony import */ var _components_cartpage_CartTotals__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/cartpage/CartTotals */ "./resources/js/components/cartpage/CartTotals.jsx");
+/* harmony import */ var _page_CartPage__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../page/CartPage */ "./resources/page/CartPage.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+//import OnSale from '../js/components/HomePage/OnSale';
 
 
 
@@ -6477,161 +6483,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_components_produce_BookCard__WEBPACK_IMPORTED_MODULE_12__["default"], {}), document.getElementById('root'));
-
-/***/ }),
-
-/***/ "./resources/js/components/HomePage/OnSale.jsx":
-/*!*****************************************************!*\
-  !*** ./resources/js/components/HomePage/OnSale.jsx ***!
-  \*****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_bootstrap_Carousel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap/Carousel */ "./node_modules/react-bootstrap/esm/Carousel.js");
-/* harmony import */ var react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-bootstrap/Card */ "./node_modules/react-bootstrap/esm/Card.js");
-/* harmony import */ var react_multi_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-multi-carousel */ "./node_modules/react-multi-carousel/index.js");
-/* harmony import */ var react_multi_carousel_lib_styles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-multi-carousel/lib/styles.css */ "./node_modules/react-multi-carousel/lib/styles.css");
-/* harmony import */ var _produce_BookCard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../produce/BookCard */ "./resources/js/components/produce/BookCard.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-//import Button from 'react-bootstrap/Button';
-//import Form from 'react-bootstrap/Form';
-
-
-
-
-//import Button from "react-bootstrap/Button";
-//import { Container } from "react-bootstrap";
-//import Slider from "react-slick";
-
-
-
-
-
-var responsive = {
-  desktop: {
-    breakpoint: {
-      max: 3000,
-      min: 1024
-    },
-    items: 4,
-    slidesToSlide: 3 // optional, default to 1.
-  },
-
-  tablet: {
-    breakpoint: {
-      max: 1024,
-      min: 464
-    },
-    items: 2,
-    slidesToSlide: 2 // optional, default to 1.
-  },
-
-  mobile: {
-    breakpoint: {
-      max: 464,
-      min: 0
-    },
-    items: 1,
-    slidesToSlide: 1 // optional, default to 1.
-  }
-};
-var OnSale = /*#__PURE__*/function (_Component) {
-  _inherits(OnSale, _Component);
-  var _super = _createSuper(OnSale);
-  function OnSale() {
-    _classCallCheck(this, OnSale);
-    return _super.apply(this, arguments);
-  }
-  _createClass(OnSale, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-        className: "",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-          className: "mt-4",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-            className: "wrapper",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h2", {
-              children: "On Sale"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-              className: "right-button",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("a", {
-                className: "btn btn-secondary",
-                href: "/",
-                children: ["View All ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("i", {
-                  "class": "fa-solid fa-caret-right"
-                })]
-              })
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_bootstrap_Carousel__WEBPACK_IMPORTED_MODULE_5__["default"], {
-            responsive: responsive,
-            swipeable: false,
-            draggable: false,
-            showDots: true,
-            ssr: true // means to render carousel on server-side.
-            ,
-            infinite: true,
-            autoPlay: this.props.deviceType !== "mobile" ? true : false,
-            autoPlaySpeed: 1000,
-            keyBoardControl: true,
-            customTransition: "all .5",
-            transitionDuration: 500,
-            containerClass: "carousel-container",
-            removeArrowOnDeviceType: ["tablet", "mobile"],
-            deviceType: this.props.deviceType,
-            dotListClass: "custom-dot-list-style",
-            itemClass: "carousel-item-padding-40-px",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_6__["default"], {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_6__["default"].Text, {
-                children: "Book1"
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_6__["default"], {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_6__["default"].Text, {
-                children: "Book2"
-              })
-            }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_6__["default"], {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_6__["default"].Text, {
-                children: "Book3"
-              })
-            }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_6__["default"], {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_6__["default"].Text, {
-                children: "Book4"
-              })
-            }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_6__["default"], {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_6__["default"].Text, {
-                children: "Book"
-              })
-            }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_6__["default"], {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_6__["default"].Text, {
-                children: "Book1"
-              })
-            })]
-          })]
-        })
-      });
-    }
-  }]);
-  return OnSale;
-}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OnSale);
+react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_page_CartPage__WEBPACK_IMPORTED_MODULE_14__["default"], {}), document.getElementById('root'));
 
 /***/ }),
 
@@ -6906,6 +6758,115 @@ var ShopPageBody = /*#__PURE__*/function (_Component) {
   return ShopPageBody;
 }(react__WEBPACK_IMPORTED_MODULE_0__.Component);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ShopPageBody);
+
+/***/ }),
+
+/***/ "./resources/js/components/cartpage/CartProduce.jsx":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/cartpage/CartProduce.jsx ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ CartProduce)
+/* harmony export */ });
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Table.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+function CartProduce() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    className: "",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      striped: "columns",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("thead", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
+            children: "Produce"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
+            children: "Price"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
+            children: "Quanity"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
+            children: "Total"
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tbody", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            children: "1"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            children: "Otto"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            children: "@mdo"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            children: "2"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            children: "Jacob"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            children: "Thornton"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            children: "@fat"
+          })]
+        })]
+      })]
+    })
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/components/cartpage/CartTotals.jsx":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/cartpage/CartTotals.jsx ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ CartTotal)
+/* harmony export */ });
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Button.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+function CartTotal() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    className: "border border-3",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+      className: "row text-center border-bottom",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("b", {
+        children: "Cart Totals"
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+      className: "row text-center fs-2 mt-4",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("b", {
+        children: ["$ ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("b", {
+          children: "99.99"
+        })]
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+      className: "row justify-content-center mt-5",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        variant: "secondary",
+        children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("b", {
+          children: "Place order"
+        })]
+      })
+    })]
+  });
+}
 
 /***/ }),
 
@@ -7265,16 +7226,6 @@ var OnSale = /*#__PURE__*/function (_Component) {
   return OnSale;
 }(react__WEBPACK_IMPORTED_MODULE_0__.Component);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OnSale);
-
-/***/ }),
-
-/***/ "./resources/js/components/homepage/Onsalepro.jsx":
-/*!********************************************************!*\
-  !*** ./resources/js/components/homepage/Onsalepro.jsx ***!
-  \********************************************************/
-/***/ (() => {
-
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\resources\\js\\components\\homepage\\Onsalepro.jsx: Unexpected keyword 'const'. (28:8)\n\n\u001b[0m \u001b[90m 26 |\u001b[39m     \u001b[36mconst\u001b[39m responsive \u001b[33m=\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 27 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 28 |\u001b[39m         \u001b[36mconst\u001b[39m [discount\u001b[33m,\u001b[39m setDiscount] \u001b[33m=\u001b[39m \u001b[33mReact\u001b[39m\u001b[33m.\u001b[39museState([])\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 29 |\u001b[39m         \u001b[36mconst\u001b[39m baseURL \u001b[33m=\u001b[39m \u001b[32m`http://127.0.0.1:8000/api/home/discount`\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 30 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 31 |\u001b[39m         useEffect(() \u001b[33m=>\u001b[39m {\u001b[0m\n    at instantiate (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:67:32)\n    at constructor (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:364:12)\n    at JSXParserMixin.raise (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:3364:19)\n    at JSXParserMixin.checkReservedWord (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:12456:12)\n    at JSXParserMixin.parseObjectProperty (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:12131:12)\n    at JSXParserMixin.parseObjPropValue (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:12154:100)\n    at JSXParserMixin.parsePropertyDefinition (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:12083:17)\n    at JSXParserMixin.parseObjectLike (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:11993:21)\n    at JSXParserMixin.parseExprAtom (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:11464:23)\n    at JSXParserMixin.parseExprAtom (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:7238:20)\n    at JSXParserMixin.parseExprSubscripts (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:11171:23)\n    at JSXParserMixin.parseUpdate (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:11153:21)\n    at JSXParserMixin.parseMaybeUnary (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:11127:23)\n    at JSXParserMixin.parseMaybeUnaryOrPrivate (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:10956:61)\n    at JSXParserMixin.parseExprOps (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:10962:23)\n    at JSXParserMixin.parseMaybeConditional (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:10937:23)\n    at JSXParserMixin.parseMaybeAssign (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:10895:21)\n    at C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:10863:39\n    at JSXParserMixin.allowInAnd (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:12635:16)\n    at JSXParserMixin.parseMaybeAssignAllowIn (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:10863:17)\n    at JSXParserMixin.parseVar (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:13578:91)\n    at JSXParserMixin.parseVarStatement (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:13399:10)\n    at JSXParserMixin.parseStatementContent (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:12986:23)\n    at JSXParserMixin.parseStatement (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:12917:17)\n    at JSXParserMixin.parseBlockOrModuleBlockBody (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:13497:25)\n    at JSXParserMixin.parseBlockBody (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:13489:10)\n    at JSXParserMixin.parseBlock (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:13477:10)\n    at JSXParserMixin.parseFunctionBody (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:12287:24)\n    at JSXParserMixin.parseFunctionBodyAndFinish (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:12271:10)\n    at C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:13637:12\n    at JSXParserMixin.withSmartMixTopicForbiddingContext (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:12617:14)\n    at JSXParserMixin.parseFunction (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:13636:10)\n    at JSXParserMixin.parseExportDefaultExpression (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:14153:19)\n    at JSXParserMixin.parseExport (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:14075:25)\n    at JSXParserMixin.parseStatementContent (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:13020:27)\n    at JSXParserMixin.parseStatement (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:12917:17)\n    at JSXParserMixin.parseBlockOrModuleBlockBody (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:13497:25)\n    at JSXParserMixin.parseBlockBody (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:13489:10)\n    at JSXParserMixin.parseProgram (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:12832:10)\n    at JSXParserMixin.parseTopLevel (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:12822:25)\n    at JSXParserMixin.parse (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:14674:10)\n    at parse (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:14716:38)\n    at parser (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\core\\lib\\parser\\index.js:52:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\core\\lib\\transformation\\normalize-file.js:87:38)\n    at normalizeFile.next (<anonymous>)\n    at run (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\core\\lib\\transformation\\index.js:31:50)\n    at run.next (<anonymous>)\n    at transform (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\core\\lib\\transform.js:29:41)\n    at transform.next (<anonymous>)");
 
 /***/ }),
 
@@ -7870,6 +7821,62 @@ function AboutPage() {
 
 /***/ }),
 
+/***/ "./resources/page/CartPage.js":
+/*!************************************!*\
+  !*** ./resources/page/CartPage.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ CartPage)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
+/* harmony import */ var _js_components_cartpage_CartProduce__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../js/components/cartpage/CartProduce */ "./resources/js/components/cartpage/CartProduce.jsx");
+/* harmony import */ var _js_components_cartpage_CartTotals__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../js/components/cartpage/CartTotals */ "./resources/js/components/cartpage/CartTotals.jsx");
+/* harmony import */ var _js_components_footer_Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../js/components/footer/Footer */ "./resources/js/components/footer/Footer.jsx");
+/* harmony import */ var _js_components_header_header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../js/components/header/header */ "./resources/js/components/header/header.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+
+
+function CartPage() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_js_components_header_header__WEBPACK_IMPORTED_MODULE_4__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+        className: " border-2 border-bottom pb-4",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("b", {
+          children: [" Your Cart: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("b", {
+            children: " number "
+          }), " items"]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+        className: "row mt-5 ",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+          className: "col-8 border border-3 border-bottom-0",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_js_components_cartpage_CartProduce__WEBPACK_IMPORTED_MODULE_1__["default"], {})
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+          className: "col-4",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_js_components_cartpage_CartTotals__WEBPACK_IMPORTED_MODULE_2__["default"], {})
+        })]
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+      className: "",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_js_components_footer_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {})
+    })]
+  });
+}
+
+/***/ }),
+
 /***/ "./resources/page/HomePage.js":
 /*!************************************!*\
   !*** ./resources/page/HomePage.js ***!
@@ -7886,14 +7893,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_components_header_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../js/components/header/header */ "./resources/js/components/header/header.jsx");
 /* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
 /* harmony import */ var _js_components_homepage_OnSale__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../js/components/homepage/OnSale */ "./resources/js/components/homepage/OnSale.jsx");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Row.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Col.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Row.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Col.js");
 /* harmony import */ var _js_components_homepage_FeaturedBooks__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../js/components/homepage/FeaturedBooks */ "./resources/js/components/homepage/FeaturedBooks.jsx");
 /* harmony import */ var _js_components_listBooks_ListBooks__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../js/components/listBooks/ListBooks */ "./resources/js/components/listBooks/ListBooks.jsx");
 /* harmony import */ var _js_components_footer_Footer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../js/components/footer/Footer */ "./resources/js/components/footer/Footer.jsx");
-/* harmony import */ var _js_components_homepage_Onsalepro__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../js/components/homepage/Onsalepro */ "./resources/js/components/homepage/Onsalepro.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -7914,7 +7920,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
-
+//import Onsalepro from '../js/components/homepage/Onsalepro';
 //import ListBooks from '../js/components/listBooks/ListBooks';
 //import BodyHomePage from '../js/components/HomePage/';
 
@@ -7930,25 +7936,23 @@ var HomePage = /*#__PURE__*/function (_Component) {
   _createClass(HomePage, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.Fragment, {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_js_components_header_header__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_js_components_homepage_Onsalepro__WEBPACK_IMPORTED_MODULE_8__["default"], {})
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__["default"], {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_js_components_header_header__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__["default"], {
               xs: 12,
               className: "",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
                 div: true,
                 className: "mt-5 d-flex justify-content-center",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_js_components_homepage_FeaturedBooks__WEBPACK_IMPORTED_MODULE_5__["default"], {})
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_js_components_homepage_FeaturedBooks__WEBPACK_IMPORTED_MODULE_5__["default"], {})
               })
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
             className: "mt-5 h-100 w-200",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_js_components_listBooks_ListBooks__WEBPACK_IMPORTED_MODULE_6__["default"], {})
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_js_components_listBooks_ListBooks__WEBPACK_IMPORTED_MODULE_6__["default"], {})
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_js_components_footer_Footer__WEBPACK_IMPORTED_MODULE_7__["default"], {})]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_js_components_footer_Footer__WEBPACK_IMPORTED_MODULE_7__["default"], {})]
       });
     }
   }]);
@@ -14466,6 +14470,65 @@ Switch.displayName = 'Switch';
   Input: _FormCheck__WEBPACK_IMPORTED_MODULE_2__["default"].Input,
   Label: _FormCheck__WEBPACK_IMPORTED_MODULE_2__["default"].Label
 }));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/esm/Table.js":
+/*!***************************************************!*\
+  !*** ./node_modules/react-bootstrap/esm/Table.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/esm/ThemeProvider.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+const Table = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(({
+  bsPrefix,
+  className,
+  striped,
+  bordered,
+  borderless,
+  hover,
+  size,
+  variant,
+  responsive,
+  ...props
+}, ref) => {
+  const decoratedBsPrefix = (0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_3__.useBootstrapPrefix)(bsPrefix, 'table');
+  const classes = classnames__WEBPACK_IMPORTED_MODULE_0___default()(className, decoratedBsPrefix, variant && `${decoratedBsPrefix}-${variant}`, size && `${decoratedBsPrefix}-${size}`, striped && `${decoratedBsPrefix}-${typeof striped === 'string' ? `striped-${striped}` : 'striped'}`, bordered && `${decoratedBsPrefix}-bordered`, borderless && `${decoratedBsPrefix}-borderless`, hover && `${decoratedBsPrefix}-hover`);
+
+  const table = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("table", { ...props,
+    className: classes,
+    ref: ref
+  });
+
+  if (responsive) {
+    let responsiveClass = `${decoratedBsPrefix}-responsive`;
+
+    if (typeof responsive === 'string') {
+      responsiveClass = `${responsiveClass}-${responsive}`;
+    }
+
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: responsiveClass,
+      children: table
+    });
+  }
+
+  return table;
+});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Table);
 
 /***/ }),
 

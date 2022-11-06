@@ -1,13 +1,13 @@
 import BookCard from './../produce/BookCard.jsx';
-import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 import axios from "axios";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import { Card, ListGroup } from "react-bootstrap";
 import "react-multi-carousel/lib/styles.css";
+import _ from 'lodash';
 const responsive = {
 
     superLargeDesktop: {
@@ -28,5 +28,9 @@ const responsive = {
         items: 1,
     },
 };
-
+export default function Onsalepro(){
+    return(
+        <div></div>
+    );
+}
 

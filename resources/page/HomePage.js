@@ -7,7 +7,7 @@ import { Container, Row,Col } from 'react-bootstrap';
 import FearturedBooks from '../js/components/homepage/FeaturedBooks';
 import ListBooks from '../js/components/listBooks/ListBooks';
 import Footer from '../js/components/footer/Footer';
-import Onsalepro from '../js/components/homepage/Onsalepro';
+//import Onsalepro from '../js/components/homepage/Onsalepro';
 //import ListBooks from '../js/components/listBooks/ListBooks';
 //import BodyHomePage from '../js/components/HomePage/';
 class HomePage extends Component {
@@ -16,7 +16,7 @@ class HomePage extends Component {
             <>
                 <Header/>
                 <Container>
-                    <Onsalepro/>
+                    {/* <Onsalepro/> */}
                 </Container>
                 <Container>
                 <Row>
