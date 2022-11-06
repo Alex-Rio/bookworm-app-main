@@ -2,7 +2,6 @@
 
 namespace App\Http\Resources;
 
-use Carbon\Carbon;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class ReviewBookResource extends JsonResource
@@ -19,7 +18,7 @@ class ReviewBookResource extends JsonResource
         return [
             "id" => $this->id,
             "review_title" => $this->review_title,
-            "review_details" => $this->review_details,
+            "review_details" => $this->review_detail,
             "review_date" => $this->review_date,
             "rating_start" => $this->rating_start
         ];

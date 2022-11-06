@@ -17,7 +17,23 @@ class ReviewBookApi extends Controller
 {
     public function index($book)
     {
-        $bookDetail = Book::detail()->findOrFail($book);
+
+        // $bookDetail = Book::detail()->findOrFail($book);
+        //     $bookDetail = new DetailBookResource($bookDetail);
+        //      $reviews = Book::findOrFail($book)->reviews()->paginate(4);
+        //     // dd('aaaaa');
+        //     $reviews = new ReviewBookCollection($reviews);
+
+        //     $group = Review::group($book)->get();
+
+        //     return response()->json([
+        //         'book' => $bookDetail,
+        //         'count' => $group,
+        //         'reviews' => $reviews
+        //     ], Response::HTTP_OK);
+
+        try {
+            $bookDetail = Book::detail()->findOrFail($book);
             $bookDetail = new DetailBookResource($bookDetail);
 
             $reviews = Book::findOrFail($book)->reviews()->paginate(4);
@@ -30,26 +46,11 @@ class ReviewBookApi extends Controller
                 'count' => $group,
                 'reviews' => $reviews
             ], Response::HTTP_OK);
-
-        // try {
-        //     $bookDetail = Book::detail()->findOrFail($book);
-        //     $bookDetail = new DetailBookResource($bookDetail);
-
-        //     $reviews = Book::findOrFail($book)->reviews()->paginate(4);
-        //     $reviews = new ReviewBookCollection($reviews);
-
-        //     $group = Review::group($book)->get();
-
-        //     return response()->json([
-        //         'book' => $bookDetail,
-        //         'count' => $group,
-        //         'reviews' => $reviews
-        //     ], Response::HTTP_OK);
-        // } catch (\Throwable $th) {
-        //     return response()->json([
-        //         'error' => 'Server error',
-        //     ], Response::HTTP_INTERNAL_SERVER_ERROR);
-        // }
+        } catch (\Throwable $th) {
+            return response()->json([
+                'error' => 'Server error',
+            ], Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
     }
 
     public function store(Request $request, $book)
@@ -67,13 +68,13 @@ class ReviewBookApi extends Controller
                 ], Response::HTTP_MISDIRECTED_REQUEST);
             }
             $data = $request->all();
-            $review = new Review();
-            $review->book_id = $book;
-            $review->review_title = $data['review_title'];
-            $review->review_details = $data['review_details'];
-            $review->rating_start = $data['rating_start'];
-            $review->review_date = Carbon::now()->timezone('Asia/Ho_Chi_Minh');
-            $review->save();
+            $reviews = new Review();
+            $reviews->book_id = $book;
+            $reviews->review_title = $data['review_title'];
+            $reviews->review_details = $data['review_details'];
+            $reviews->rating_start = $data['rating_start'];
+            $reviews->review_date = Carbon::now()->timezone('Asia/Ho_Chi_Minh');
+            $reviews->save();
             return response()->json([
                 'message' => 'Review created successfully'
             ], Response::HTTP_CREATED);

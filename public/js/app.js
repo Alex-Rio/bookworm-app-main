@@ -6462,7 +6462,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_produce_ReviewPorts__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/produce/ReviewPorts */ "./resources/js/components/produce/ReviewPorts.jsx");
 /* harmony import */ var _page_ProductPage__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../page/ProductPage */ "./resources/page/ProductPage.js");
 /* harmony import */ var _page_AboutPage__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../page/AboutPage */ "./resources/page/AboutPage.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _components_produce_BookCard__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/produce/BookCard */ "./resources/js/components/produce/BookCard.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
@@ -6476,7 +6477,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_components_produce_DetailBook__WEBPACK_IMPORTED_MODULE_6__["default"], {}), document.getElementById('root'));
+
+react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_components_produce_BookCard__WEBPACK_IMPORTED_MODULE_12__["default"], {}), document.getElementById('root'));
 
 /***/ }),
 
@@ -7270,71 +7272,9 @@ var OnSale = /*#__PURE__*/function (_Component) {
 /*!********************************************************!*\
   !*** ./resources/js/components/homepage/Onsalepro.jsx ***!
   \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Onsalepro)
-/* harmony export */ });
-/* harmony import */ var _produce_BookCard_jsx__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../produce/BookCard.jsx */ "./resources/js/components/produce/BookCard.jsx");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_multi_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-multi-carousel */ "./node_modules/react-multi-carousel/index.js");
-/* harmony import */ var react_multi_carousel_lib_styles_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-multi-carousel/lib/styles.css */ "./node_modules/react-multi-carousel/lib/styles.css");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-
-
-
-
-var responsive = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: {
-      max: 4000,
-      min: 3000
-    },
-    items: 5
-  },
-  desktop: {
-    breakpoint: {
-      max: 3000,
-      min: 1024
-    },
-    items: 3
-  },
-  tablet: {
-    breakpoint: {
-      max: 1024,
-      min: 464
-    },
-    items: 2
-  },
-  mobile: {
-    breakpoint: {
-      max: 464,
-      min: 0
-    },
-    items: 1
-  }
-};
-function Onsalepro() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_multi_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      responsive: responsive,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_produce_BookCard_jsx__WEBPACK_IMPORTED_MODULE_0__["default"], {})
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-        children: "Item 2"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-        children: "Item 3"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-        children: "Item 4"
-      })]
-    })
-  });
-}
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\resources\\js\\components\\homepage\\Onsalepro.jsx: Unexpected keyword 'const'. (28:8)\n\n\u001b[0m \u001b[90m 26 |\u001b[39m     \u001b[36mconst\u001b[39m responsive \u001b[33m=\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 27 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 28 |\u001b[39m         \u001b[36mconst\u001b[39m [discount\u001b[33m,\u001b[39m setDiscount] \u001b[33m=\u001b[39m \u001b[33mReact\u001b[39m\u001b[33m.\u001b[39museState([])\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 29 |\u001b[39m         \u001b[36mconst\u001b[39m baseURL \u001b[33m=\u001b[39m \u001b[32m`http://127.0.0.1:8000/api/home/discount`\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 30 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 31 |\u001b[39m         useEffect(() \u001b[33m=>\u001b[39m {\u001b[0m\n    at instantiate (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:67:32)\n    at constructor (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:364:12)\n    at JSXParserMixin.raise (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:3364:19)\n    at JSXParserMixin.checkReservedWord (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:12456:12)\n    at JSXParserMixin.parseObjectProperty (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:12131:12)\n    at JSXParserMixin.parseObjPropValue (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:12154:100)\n    at JSXParserMixin.parsePropertyDefinition (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:12083:17)\n    at JSXParserMixin.parseObjectLike (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:11993:21)\n    at JSXParserMixin.parseExprAtom (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:11464:23)\n    at JSXParserMixin.parseExprAtom (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:7238:20)\n    at JSXParserMixin.parseExprSubscripts (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:11171:23)\n    at JSXParserMixin.parseUpdate (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:11153:21)\n    at JSXParserMixin.parseMaybeUnary (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:11127:23)\n    at JSXParserMixin.parseMaybeUnaryOrPrivate (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:10956:61)\n    at JSXParserMixin.parseExprOps (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:10962:23)\n    at JSXParserMixin.parseMaybeConditional (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:10937:23)\n    at JSXParserMixin.parseMaybeAssign (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:10895:21)\n    at C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:10863:39\n    at JSXParserMixin.allowInAnd (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:12635:16)\n    at JSXParserMixin.parseMaybeAssignAllowIn (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:10863:17)\n    at JSXParserMixin.parseVar (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:13578:91)\n    at JSXParserMixin.parseVarStatement (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:13399:10)\n    at JSXParserMixin.parseStatementContent (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:12986:23)\n    at JSXParserMixin.parseStatement (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:12917:17)\n    at JSXParserMixin.parseBlockOrModuleBlockBody (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:13497:25)\n    at JSXParserMixin.parseBlockBody (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:13489:10)\n    at JSXParserMixin.parseBlock (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:13477:10)\n    at JSXParserMixin.parseFunctionBody (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:12287:24)\n    at JSXParserMixin.parseFunctionBodyAndFinish (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:12271:10)\n    at C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:13637:12\n    at JSXParserMixin.withSmartMixTopicForbiddingContext (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:12617:14)\n    at JSXParserMixin.parseFunction (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:13636:10)\n    at JSXParserMixin.parseExportDefaultExpression (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:14153:19)\n    at JSXParserMixin.parseExport (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:14075:25)\n    at JSXParserMixin.parseStatementContent (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:13020:27)\n    at JSXParserMixin.parseStatement (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:12917:17)\n    at JSXParserMixin.parseBlockOrModuleBlockBody (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:13497:25)\n    at JSXParserMixin.parseBlockBody (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:13489:10)\n    at JSXParserMixin.parseProgram (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:12832:10)\n    at JSXParserMixin.parseTopLevel (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:12822:25)\n    at JSXParserMixin.parse (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:14674:10)\n    at parse (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\parser\\lib\\index.js:14716:38)\n    at parser (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\core\\lib\\parser\\index.js:52:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\core\\lib\\transformation\\normalize-file.js:87:38)\n    at normalizeFile.next (<anonymous>)\n    at run (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\core\\lib\\transformation\\index.js:31:50)\n    at run.next (<anonymous>)\n    at transform (C:\\Users\\letru\\OneDrive\\Máy tính\\nash_deadline\\bookworm-app-main\\bookworm-app-main\\node_modules\\@babel\\core\\lib\\transform.js:29:41)\n    at transform.next (<anonymous>)");
 
 /***/ }),
 
@@ -7405,6 +7345,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ BookCard)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap/Card */ "./node_modules/react-bootstrap/esm/Card.js");
+/* harmony import */ var react_bootstrap_ListGroup__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap/ListGroup */ "./node_modules/react-bootstrap/esm/ListGroup.js");
 /* harmony import */ var _assets_bookcover_Images__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../assets/bookcover/Images */ "./resources/assets/bookcover/Images.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
@@ -7413,12 +7355,41 @@ __webpack_require__.r(__webpack_exports__);
 //import IMAGES from "../../assets/bookcover/images";
 
 
+
 function BookCard(props) {
   // console.log(props);
   var book = props.book;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
     className: "col-3 justify-content-center mt-2 ml-2",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(CartBook, {})
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_3__["default"].Img, {
+        variant: "top",
+        src: _assets_bookcover_Images__WEBPACK_IMPORTED_MODULE_1__["default"][book.book_cover_photo],
+        alt: "image1",
+        height: "300px"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_3__["default"].Body, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_3__["default"].Title, {
+          children: book.book_title
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_3__["default"].Text, {
+          style: {
+            fontSize: "12px"
+          },
+          children: book.author_name
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap_ListGroup__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        variant: "flush",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap_ListGroup__WEBPACK_IMPORTED_MODULE_4__["default"].Item, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("del", {
+            style: {
+              fontSize: "12px"
+            },
+            children: book.discount_price ? "$" + book.book_price : ""
+          }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("b", {
+            children: book.discount_price ? "$" + book.discount_price : "$" + book.book_price
+          })]
+        })
+      })]
+    })
   });
 }
 
@@ -13427,6 +13398,143 @@ __webpack_require__.r(__webpack_exports__);
 const context = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createContext(null);
 context.displayName = 'InputGroupContext';
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (context);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/esm/ListGroup.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/react-bootstrap/esm/ListGroup.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var warning__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! warning */ "./node_modules/warning/warning.js");
+/* harmony import */ var warning__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(warning__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var uncontrollable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! uncontrollable */ "./node_modules/uncontrollable/lib/esm/index.js");
+/* harmony import */ var _restart_ui_Nav__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @restart/ui/Nav */ "./node_modules/@restart/ui/esm/Nav.js");
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/esm/ThemeProvider.js");
+/* harmony import */ var _ListGroupItem__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ListGroupItem */ "./node_modules/react-bootstrap/esm/ListGroupItem.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+
+const ListGroup = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.forwardRef((props, ref) => {
+  const {
+    className,
+    bsPrefix: initialBsPrefix,
+    variant,
+    horizontal,
+    numbered,
+    // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+    as = 'div',
+    ...controlledProps
+  } = (0,uncontrollable__WEBPACK_IMPORTED_MODULE_3__.useUncontrolled)(props, {
+    activeKey: 'onSelect'
+  });
+  const bsPrefix = (0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__.useBootstrapPrefix)(initialBsPrefix, 'list-group');
+  let horizontalVariant;
+
+  if (horizontal) {
+    horizontalVariant = horizontal === true ? 'horizontal' : `horizontal-${horizontal}`;
+  }
+
+   true ? warning__WEBPACK_IMPORTED_MODULE_2___default()(!(horizontal && variant === 'flush'), '`variant="flush"` and `horizontal` should not be used together.') : 0;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_restart_ui_Nav__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    ref: ref,
+    ...controlledProps,
+    as: as,
+    className: classnames__WEBPACK_IMPORTED_MODULE_0___default()(className, bsPrefix, variant && `${bsPrefix}-${variant}`, horizontalVariant && `${bsPrefix}-${horizontalVariant}`, numbered && `${bsPrefix}-numbered`)
+  });
+});
+ListGroup.displayName = 'ListGroup';
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Object.assign(ListGroup, {
+  Item: _ListGroupItem__WEBPACK_IMPORTED_MODULE_7__["default"]
+}));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/esm/ListGroupItem.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-bootstrap/esm/ListGroupItem.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _restart_hooks_useEventCallback__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @restart/hooks/useEventCallback */ "./node_modules/@restart/hooks/esm/useEventCallback.js");
+/* harmony import */ var _restart_ui_NavItem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @restart/ui/NavItem */ "./node_modules/@restart/ui/esm/NavItem.js");
+/* harmony import */ var _restart_ui_SelectableContext__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @restart/ui/SelectableContext */ "./node_modules/@restart/ui/esm/SelectableContext.js");
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/esm/ThemeProvider.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+const ListGroupItem = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(({
+  bsPrefix,
+  active,
+  disabled,
+  eventKey,
+  className,
+  variant,
+  action,
+  as,
+  ...props
+}, ref) => {
+  bsPrefix = (0,_ThemeProvider__WEBPACK_IMPORTED_MODULE_4__.useBootstrapPrefix)(bsPrefix, 'list-group-item');
+  const [navItemProps, meta] = (0,_restart_ui_NavItem__WEBPACK_IMPORTED_MODULE_5__.useNavItem)({
+    key: (0,_restart_ui_SelectableContext__WEBPACK_IMPORTED_MODULE_6__.makeEventKey)(eventKey, props.href),
+    active,
+    ...props
+  });
+  const handleClick = (0,_restart_hooks_useEventCallback__WEBPACK_IMPORTED_MODULE_2__["default"])(event => {
+    if (disabled) {
+      event.preventDefault();
+      event.stopPropagation();
+      return;
+    }
+
+    navItemProps.onClick(event);
+  });
+
+  if (disabled && props.tabIndex === undefined) {
+    props.tabIndex = -1;
+    props['aria-disabled'] = true;
+  } // eslint-disable-next-line no-nested-ternary
+
+
+  const Component = as || (action ? props.href ? 'a' : 'button' : 'div');
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Component, {
+    ref: ref,
+    ...props,
+    ...navItemProps,
+    onClick: handleClick,
+    className: classnames__WEBPACK_IMPORTED_MODULE_0___default()(className, bsPrefix, meta.isActive && 'active', disabled && 'disabled', variant && `${bsPrefix}-${variant}`, action && `${bsPrefix}-action`)
+  });
+});
+ListGroupItem.displayName = 'ListGroupItem';
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ListGroupItem);
 
 /***/ }),
 

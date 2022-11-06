@@ -11,10 +11,11 @@ import CartBook from './components/produce/CartBook';
 import ReviewsCustomer from './components/produce/ReviewPorts';
 import DetailPage from '../page/ProductPage';
 import AboutPage from '../page/AboutPage';
+import BookCard from './components/produce/BookCard';
 
 ReactDOM.render(
 
-  <DetailBook/>,
+  <BookCard/>,
 
 
   document.getElementById('root')

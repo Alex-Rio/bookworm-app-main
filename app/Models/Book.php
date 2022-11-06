@@ -19,7 +19,10 @@ class Book extends Model
         'sort',
         'category',
         'author',
-        'star'
+        'star',
+        'reviews'
+
+
     ];
 
     public function author()
@@ -57,7 +60,9 @@ class Book extends Model
             ->leftJoin('review', 'review.book_id', 'book.id')
             ->leftJoin('discount', 'discount.book_id', 'book.id')
             ->groupBy('book.id', 'discount.id')
-            ->select('book.id', 'discount.discount_price', 'book.book_price', 'book.category_id', 'book.book_title', 'book.book_cover_photo', 'book.author_id', 'discount.discount_start_date', 'discount.discount_end_date');
+            ->select('book.id', 'discount.discount_price', 'book.book_price',
+            'book.category_id', 'book.book_title', 'book.book_cover_photo', 'book.author_id',
+            'discount.discount_start_date', 'discount.discount_end_date');
     }
 
     public function scopeDetail()

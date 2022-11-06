@@ -2,7 +2,14 @@ import BookCard from './../produce/BookCard.jsx';
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+
+import axios from "axios";
+import React, { useEffect } from "react";
+import Carousel from "react-multi-carousel";
+import { Card, ListGroup } from "react-bootstrap";
+import "react-multi-carousel/lib/styles.css";
 const responsive = {
+
     superLargeDesktop: {
         // the naming can be any, depends on you.
         breakpoint: { max: 4000, min: 3000 },
@@ -21,15 +28,5 @@ const responsive = {
         items: 1,
     },
 };
-export default function Onsalepro() {
-    return (
-        <div>
-            <Carousel responsive={responsive}>
-                <div><BookCard/></div>
-                <div>Item 2</div>
-                <div>Item 3</div>
-                <div>Item 4</div>
-            </Carousel>
-        </div>
-    );
-}
+
+

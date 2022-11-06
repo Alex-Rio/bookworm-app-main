@@ -10,10 +10,10 @@ export default function BookCard(props) {
 
     return (
         <div className="col-3 justify-content-center mt-2 ml-2">
-            {/* <Card>
+            <Card>
                 <Card.Img
                     variant="top"
-                    src={IMAGES['book1']}
+                    src={IMAGES[book.book_cover_photo]}
                     alt="image1"
                     height={"300px"}
                 />
@@ -29,8 +29,8 @@ export default function BookCard(props) {
                         <b>{book.discount_price ? "$" + book.discount_price : "$" + book.book_price}</b>
                     </ListGroup.Item>
                 </ListGroup>
-            </Card> */}
-            <CartBook/>
+            </Card>
+
         </div>
     );
 }

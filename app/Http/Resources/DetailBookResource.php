@@ -39,7 +39,7 @@ class DetailBookResource extends JsonResource
             'book_cover_photo' => $this->book_cover_photo,
             'date_start' => $this->discount_start_date,
             'date_end' => $this->discount_end_date,
-            // 'reviews' => new ReviewBookCollection($this->reviews()->paginate(20))
+            //'reviews' => new ReviewBookCollection($this->reviews()->paginate(20))
         ];
     }
 }

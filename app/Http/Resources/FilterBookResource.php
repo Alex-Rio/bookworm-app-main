@@ -38,7 +38,7 @@ class FilterBookResource extends JsonResource
             'author' => new AuthorResource($this->author),
             'date_start' => $this->discount_start_date,
             'date_end' => $this->discount_end_date,
-            // 'reviews' => $this->reviews
+            //'reviews' => $this->reviews
         ];
     }
 }
