@@ -5,17 +5,16 @@ import Card from "react-bootstrap/Card";
 import { ListGroup } from "react-bootstrap";
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-export default function RecommendBooks(){
-    const [recommend, setRecommend] = React.useState([]);
+export default function PopularBooks(){
+    const [popular, setPopular] = React.useState([]);
     const baseUrl =
-        "http://127.0.0.1:8000/api/books/filter?show=8&sort=recommend";
+        "http://127.0.0.1:8000/api/books/filter?show=8&sort=popular";
         useEffect(() => {
             axios
                 .get(baseUrl)
                 .then((response) => {
-                    const topRecommend = response.data.data;
-
-                    setRecommend(topRecommend);
+                    const topPopular = response.data.data;
+                    setPopular(topPopular);
                 })
                 .catch((error) => console.error(`Error: ${error}`));
         }, []);
@@ -25,7 +24,7 @@ export default function RecommendBooks(){
                         <Box sx={{ flexGrow: 1 }}>
                             <Grid container spacing={2}>
                             {
-                                recommend.map((book, index)=>(
+                                popular.map((book, index)=>(
                                     <Grid item xs={3}>
                                         <div className="book ps-3 m-2" key={index}>
                                             <Card className="" >

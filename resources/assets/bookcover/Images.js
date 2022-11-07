@@ -8,7 +8,9 @@ const IMAGES = {
     book7 :  require('./book7.jpg').default,
     book8 :  require('./book8.jpg').default,
     book9 :  require('./book9.jpg').default,
-    book10 :  require('./book10.jpg').default
+    book10 :  require('./book10.jpg').default,
+    book11 :  require('./book11.jpg').default,
+
 }
 
 export default IMAGES;
