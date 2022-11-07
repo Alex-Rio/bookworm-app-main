@@ -16,10 +16,11 @@ import ListOther from './components/cartpage/CartProduce';
 import CartTotal from './components/cartpage/CartTotals';
 import CartPage from '../page/CartPage';
 import ListBooks from './components/listBooks/ListBooks';
+import ProductPage from '../page/ProductPage';
 
 ReactDOM.render(
 
-  <HomePage/>,
+  <ProductPage/>,
 
 
   document.getElementById('root')

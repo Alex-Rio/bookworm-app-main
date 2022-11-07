@@ -1,3 +1,10 @@
 .detailbook{
     padding: 0px 12px 0px 0px !important;
 }
+.cartbook{
+    height: 100px !important;
+}
+.cart-group .card{
+    height: 300px !important;
+    width: 300px !important;
+   }

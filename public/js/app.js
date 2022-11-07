@@ -16242,7 +16242,8 @@ var IMAGES = {
   book7: (__webpack_require__(/*! ./book7.jpg */ "./resources/assets/bookcover/book7.jpg")["default"]),
   book8: (__webpack_require__(/*! ./book8.jpg */ "./resources/assets/bookcover/book8.jpg")["default"]),
   book9: (__webpack_require__(/*! ./book9.jpg */ "./resources/assets/bookcover/book9.jpg")["default"]),
-  book10: (__webpack_require__(/*! ./book10.jpg */ "./resources/assets/bookcover/book10.jpg")["default"])
+  book10: (__webpack_require__(/*! ./book10.jpg */ "./resources/assets/bookcover/book10.jpg")["default"]),
+  book11: (__webpack_require__(/*! ./book11.jpg */ "./resources/assets/bookcover/book11.jpg")["default"])
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (IMAGES);
 
@@ -16291,7 +16292,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_page_HomePage__WEBPACK_IMPORTED_MODULE_2__["default"], {}), document.getElementById('root'));
+
+react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_page_ProductPage__WEBPACK_IMPORTED_MODULE_9__["default"], {}), document.getElementById('root'));
 
 /***/ }),
 
@@ -17388,8 +17390,8 @@ function CartBook() {
     setQuantity = _useState2[1];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["default"], {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      fluid: "",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        border: "light",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"].Header, {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"].Text, {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
@@ -17453,7 +17455,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _assets_bookcover_book1_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../assets/bookcover/book1.jpg */ "./resources/assets/bookcover/book1.jpg");
 /* harmony import */ var _DetailBook_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DetailBook.css */ "./resources/js/components/produce/DetailBook.css");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _assets_bookcover_Images__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../assets/bookcover/Images */ "./resources/assets/bookcover/Images.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
 
 
 
@@ -17461,26 +17468,28 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function DetailBook() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
     className: "wrapper-book-detail",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
       className: "img-author",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
         src: _assets_bookcover_book1_jpg__WEBPACK_IMPORTED_MODULE_0__["default"],
-        alt: "img-something"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
-        children: ["By ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("b", {
+        alt: "img-something",
+        width: "300px",
+        height: "450px"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
+        children: ["By ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("b", {
           children: "Author Ana"
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
       className: "content-book",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h4", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h4", {
         children: "Book title"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
         className: "text-break",
         children: "sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {})]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {})]
     })]
   });
 }
@@ -17973,18 +17982,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ DetailPage)
 /* harmony export */ });
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
 /* harmony import */ var _js_components_produce_ListReviews__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../js/components/produce/ListReviews */ "./resources/js/components/produce/ListReviews.jsx");
-/* harmony import */ var _js_components_produce_DetailBook__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../js/components/produce/DetailBook */ "./resources/js/components/produce/DetailBook.jsx");
-/* harmony import */ var _js_components_header_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../js/components/header/header */ "./resources/js/components/header/header.jsx");
-/* harmony import */ var _css_detailbook_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../css/detailbook.css */ "./resources/css/detailbook.css");
-/* harmony import */ var _js_components_produce_ReviewPorts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../js/components/produce/ReviewPorts */ "./resources/js/components/produce/ReviewPorts.jsx");
-/* harmony import */ var _js_components_footer_Footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../js/components/footer/Footer */ "./resources/js/components/footer/Footer.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _js_components_produce_CartBook__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../js/components/produce/CartBook */ "./resources/js/components/produce/CartBook.jsx");
+/* harmony import */ var _js_components_produce_DetailBook__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../js/components/produce/DetailBook */ "./resources/js/components/produce/DetailBook.jsx");
+/* harmony import */ var _js_components_header_header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../js/components/header/header */ "./resources/js/components/header/header.jsx");
+/* harmony import */ var _css_detailbook_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../css/detailbook.css */ "./resources/css/detailbook.css");
+/* harmony import */ var _js_components_produce_ReviewPorts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../js/components/produce/ReviewPorts */ "./resources/js/components/produce/ReviewPorts.jsx");
+/* harmony import */ var _js_components_footer_Footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../js/components/footer/Footer */ "./resources/js/components/footer/Footer.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 //import ListBooks from "../js/components/listBooks/ListBooks";
 
-//import CartBook from "../js/components/produce/CartBook";
+
 
 
 
@@ -17993,41 +18003,42 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function DetailPage() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"], {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_js_components_header_header__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_js_components_header_header__WEBPACK_IMPORTED_MODULE_3__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
         style: {
           paddingRight: 0
         },
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
           className: "pt-5 pb-5 border-bottom border-4 border-dark",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h1", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("h1", {
             className: "d-inline mt-2",
             children: "Category Name"
           })
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
         className: "row mt-2 ",
         style: {
           marginLeft: 0
         },
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
           className: " detailbook col-8 border border-2 ",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_js_components_produce_DetailBook__WEBPACK_IMPORTED_MODULE_1__["default"], {})
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-          className: "col-4 p-0"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_js_components_produce_DetailBook__WEBPACK_IMPORTED_MODULE_2__["default"], {})
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+          className: "col-4",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_js_components_produce_CartBook__WEBPACK_IMPORTED_MODULE_1__["default"], {})
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
           className: "row mt-5",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
             className: "col-8 border",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_js_components_produce_ListReviews__WEBPACK_IMPORTED_MODULE_0__["default"], {})
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_js_components_produce_ListReviews__WEBPACK_IMPORTED_MODULE_0__["default"], {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
             className: "col-4",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_js_components_produce_ReviewPorts__WEBPACK_IMPORTED_MODULE_4__["default"], {})
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_js_components_produce_ReviewPorts__WEBPACK_IMPORTED_MODULE_5__["default"], {})
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {})]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {})]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_js_components_footer_Footer__WEBPACK_IMPORTED_MODULE_5__["default"], {})]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_js_components_footer_Footer__WEBPACK_IMPORTED_MODULE_6__["default"], {})]
   });
 }
 
@@ -18274,7 +18285,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".detailbook{\n    padding: 0px 12px 0px 0px !important;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".detailbook{\n    padding: 0px 12px 0px 0px !important;\n}\n.cartbook{\n    height: 100px !important;\n}\n.cart-group .card{\n    height: 300px !important;\n    width: 300px !important;\n   }\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -18322,7 +18333,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".wrapper-book-detail {\n    display: inline;\n\n}\n\n.wrapper-book-detail .img-author{\n    float: left;\n    text-align: right;\n    margin-right: 10px;\n}\n\n.wrapper-book-detail .img-author img{\n    height: 250px;\n    width: 200px;\n\n}\n\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".wrapper-book-detail {\n    display: inline;\n\n}\n\n.wrapper-book-detail .img-author{\n    float: left;\n    text-align: right;\n    margin-right: 10px;\n}\n\n\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -19097,6 +19108,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/book10.jpg?e282c322fed00242ee013e6deee2e6de");
+
+/***/ }),
+
+/***/ "./resources/assets/bookcover/book11.jpg":
+/*!***********************************************!*\
+  !*** ./resources/assets/bookcover/book11.jpg ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/book11.jpg?186aa27af349621ce6363a0d9affe8b9");
 
 /***/ }),
 

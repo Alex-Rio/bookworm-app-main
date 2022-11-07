@@ -1,7 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 //import ListBooks from "../js/components/listBooks/ListBooks";
 import ListReviews from "../js/components/produce/ListReviews"
-//import CartBook from "../js/components/produce/CartBook";
+import CartBook from "../js/components/produce/CartBook";
 import DetailBook from "../js/components/produce/DetailBook";
 import Header from "../js/components/header/header";
 import "../css/detailbook.css";
@@ -22,8 +22,8 @@ export default function DetailPage(){
                 <div className=" detailbook col-8 border border-2 " >
                     <DetailBook/>
                 </div>
-                <div className="col-4 p-0">
-                    {/* <CartBook/> */}
+                <div className="col-4">
+                     <CartBook/>
                 </div>
                 <div className="row mt-5">
                     <div className="col-8 border">

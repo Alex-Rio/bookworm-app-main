@@ -6,8 +6,8 @@ export default function CartBook() {
     const [quantity, setQuantity] = useState(0);
     return (
         <Container>
-            <CardGroup fluid="">
-                <Card>
+            <CardGroup>
+                <Card border='light' >
                     <Card.Header>
                         <Card.Text>
                             <span
