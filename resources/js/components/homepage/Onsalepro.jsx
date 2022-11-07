@@ -30,7 +30,9 @@ const responsive = {
 };
 export default function Onsalepro(){
     return(
-        <div></div>
+        <div>
+
+        </div>
     );
 }
 

@@ -18,7 +18,7 @@ import CartPage from '../page/CartPage';
 
 ReactDOM.render(
 
-  <CartPage/>,
+  <HomePage/>,
 
 
   document.getElementById('root')
