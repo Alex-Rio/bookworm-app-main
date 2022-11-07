@@ -1,19 +1,13 @@
-import axios from "axios";
-import React, { Component,useEffect } from "react";
-import imgBook1 from "../../../assets/bookcover/book1.jpg";
-//import Carousel from "react-bootstrap/Carousel";
+import React from "react";
+import { Button, Card, CardGroup } from "react-bootstrap";
 import IMAGES from "../../../assets/bookcover/Images";
 import Card from "react-bootstrap/Card";
-//import Carousel from "react-multi-carousel";
 import { ListGroup } from "react-bootstrap";
-//import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-//import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 
 
-//import CardGroup from "react-bootstrap/Card";
-export default function ListBooks () {
+export default function FeatureBooks(){
     const [recommend, setRecommend] = React.useState([]);
     const baseUrl =
         "http://127.0.0.1:8000/api/books/filter?show=8&sort=recommend";
@@ -67,4 +61,5 @@ export default function ListBooks () {
          </div>
         );
     }
+
 

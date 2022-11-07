@@ -9,7 +9,7 @@ export default function BookCard(props) {
     const { book } = props;
 
     return (
-        <div className="col-3 justify-content-center mt-2 ml-2">
+        <div className="col-3 justify-content-center mt-1 ml-1">
             <Card>
                 <Card.Img
                     variant="top"
@@ -22,13 +22,14 @@ export default function BookCard(props) {
                     <Card.Text style={{ fontSize: "12px" }}>
                         {book.author_name}
                     </Card.Text>
+
                 </Card.Body>
-                <ListGroup variant="flush">
+                <Card.Footer variant="flush">
                     <ListGroup.Item>
                         <del style={{ fontSize: "12px" }}>{book.discount_price ? "$"+book.book_price : ""}</del>{" "}
                         <b>{book.discount_price ? "$" + book.discount_price : "$" + book.book_price}</b>
                     </ListGroup.Item>
-                </ListGroup>
+                </Card.Footer>
             </Card>
 
         </div>
