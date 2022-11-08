@@ -6,6 +6,9 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 
 export default function BtnSort (){
 
+    const onSale=()=>{
+
+    }
     return(
         <div >
             {[DropdownButton].map((DropdownType, idx) => (
@@ -16,7 +19,7 @@ export default function BtnSort (){
                 size="sm"
                 variant="secondary"
                 title="Sort by on sale">
-                <Dropdown.Item eventKey="1">Sort by on sale</Dropdown.Item>
+                <Dropdown.Item onClick={onSale} eventKey="1">Sort by on sale</Dropdown.Item>
                 <Dropdown.Item eventKey="2">Sort by popular</Dropdown.Item>
                 <Dropdown.Item eventKey="3">Sort by price: low to high</Dropdown.Item>
                 <Dropdown.Item eventKey="4">Sort by price: high to low</Dropdown.Item>

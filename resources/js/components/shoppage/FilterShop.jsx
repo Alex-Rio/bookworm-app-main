@@ -11,7 +11,6 @@ export default function FilterShop(){
         .get(baseUrl)
         .then ((response) => {
             const topFilter = response.data;
-            console.log(topFilter);
             setFilter(topFilter);
 
         })
