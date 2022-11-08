@@ -42,9 +42,7 @@ export default function AboutPage(){
         </div>
     </div>
        </Container>
-     <div className="">
-        <Footer/>
-     </div>
+
        </div>
     );
 }

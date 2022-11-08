@@ -1,18 +1,15 @@
 import axios from "axios";
 import React, { Component,useEffect } from "react";
-import imgBook1 from "../../../assets/bookcover/book1.jpg";
-//import Carousel from "react-bootstrap/Carousel";
 import IMAGES from "../../../assets/bookcover/Images";
 import Card from "react-bootstrap/Card";
-//import Carousel from "react-multi-carousel";
+
 import { ListGroup } from "react-bootstrap";
-//import { styled } from '@mui/material/styles';
+
 import Box from '@mui/material/Box';
-//import Paper from '@mui/material/Paper';
+
 import Grid from '@mui/material/Grid';
 
 
-//import CardGroup from "react-bootstrap/Card";
 export default function ListBooks () {
     const [recommend, setRecommend] = React.useState([]);
     const baseUrl =

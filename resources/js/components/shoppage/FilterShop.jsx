@@ -1,9 +1,10 @@
 import axios from "axios";
-import {useEffect} from "react";
+import {useEffect ,useState} from "react";
 import { Accordion, Container } from "react-bootstrap";
 
 export default function FilterShop(){
-    const[filter, setFilter] = React.useState([]);
+
+    const[filter, setFilter] = useState([]);
     const baseUrl='http://127.0.0.1:8000/api/filters';
     useEffect(()=> {
         axios
@@ -11,18 +12,20 @@ export default function FilterShop(){
         .then ((response) => {
             const topFilter = response.data.data;
             setFilter(topFilter);
+            console.log(topFilter);
         })
        .catch((error)=> console.error(`Error: ${error}`))
     },[]);
+    //========================================================
     return(
         <Container>
-        {filter.map ((filter, index)=> {
+        {filter.map((filter,index)=> {
             return(
                  <div key={index}>
                     <p className="fw-bold">
                         Filter By
                     </p>
-                    <Accordion className="border mt-3 shadow-sm" defaultActiveKey='0' flush>
+                    <Accordion className="border mt-3 shadow-sm" defaultActiveKey='0'>
 
                         <Accordion.Item eventKey="0">
                             <Accordion.Header><b>Category</b></Accordion.Header>

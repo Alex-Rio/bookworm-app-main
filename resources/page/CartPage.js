@@ -22,9 +22,7 @@ import Header from '../js/components/header/header';
                 </div>
             </div>
         </Container>
-        <div className=''>
-            <Footer/>
-        </div>
+    
         </>
 
     )

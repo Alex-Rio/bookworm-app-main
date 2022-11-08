@@ -6,7 +6,7 @@ import DetailBook from "../js/components/produce/DetailBook";
 import Header from "../js/components/header/header";
 import "../css/detailbook.css";
 import ReviewPorts from '../js/components/produce/ReviewPorts'
-import Footer from "../js/components/footer/Footer";
+
 
 export default function DetailPage(){
     return(
@@ -38,7 +38,7 @@ export default function DetailPage(){
                 </div>
             </div>
         </Container>
-        <Footer/>
+
        </div>
     )
 }

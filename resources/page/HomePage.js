@@ -45,7 +45,7 @@ export default function HomePage() {
 
                 </Tabs>
                 </Container>
-                <Footer/>
+
             </div>
       );
     }
