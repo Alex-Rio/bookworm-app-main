@@ -2,7 +2,7 @@ import { Component } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import FilterShop from "./FilterShop";
 //import NavDropdown from "react-bootstrap/NavDropdown";
-import BtnSort from "./BtnSort";
+//import BtnSort from "./BtnSort";
 //import ListBooks from "../listBooks/ListBooks";
 class ShopPageBody extends Component {
     render() {
@@ -23,11 +23,13 @@ class ShopPageBody extends Component {
                             </Col>
                             <Col md={10} className='text-end'>
                                 <div>
-                                    <BtnSort/>
+                                    {/* <BtnSort/> */}
                                 </div>
                             </Col>
                         </Row>
                         <div>
+
+                            <a>List Book</a>
 
                         </div>
                         </Col>

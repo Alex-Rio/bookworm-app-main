@@ -29,6 +29,8 @@
         "@mui/material": "^5.10.12",
         "react-grid-system": "^8.1.6",
         "react-multi-carousel": "^2.8.2",
+        "react-router": "^6.4.3",
+        "react-router-dom": "^6.4.3",
         "react-slick": "^0.29.0",
         "slick-carousel": "^1.8.1"
     }

@@ -25,8 +25,8 @@ export default function PopularBooks(){
                             <Grid container spacing={2}>
                             {
                                 popular.map((book, index)=>(
-                                    <Grid item xs={3}>
-                                        <div className="book ps-3 m-2" key={index}>
+                                    <Grid item xs={3} key={index}>
+                                        <div className="book ps-3 m-2">
                                             <Card className="" >
                                                 <Card.Img
                                                     variant="top"

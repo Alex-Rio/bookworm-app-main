@@ -5,7 +5,7 @@ import "./DetailBook.css"
 import axios from "axios";
 import IMAGES from "../../../assets/bookcover/Images";
 export default function DetailBook() {
- 
+ //const
     return (
 
         <div className="wrapper-book-detail">

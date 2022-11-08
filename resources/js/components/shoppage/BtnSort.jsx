@@ -8,7 +8,6 @@ export default function BtnSort (){
 
     return(
         <div >
-
             {[DropdownButton].map((DropdownType, idx) => (
               <DropdownType
                 as={ButtonGroup}
@@ -23,8 +22,6 @@ export default function BtnSort (){
                 <Dropdown.Item eventKey="4">Sort by price: high to low</Dropdown.Item>
               </DropdownType>
             ))}
-
-
             {[DropdownButton].map((DropdownType, idx) => (
               <DropdownType
                 as={ButtonGroup}
@@ -33,9 +30,11 @@ export default function BtnSort (){
                 size="sm"
                 variant="secondary"
                 title="Show 20 ">
-                <Dropdown.Item eventKey="1">20</Dropdown.Item>
-                <Dropdown.Item eventKey="2">50</Dropdown.Item>
-                <Dropdown.Item eventKey="3">100</Dropdown.Item>
+                <Dropdown.Item eventKey="1">5</Dropdown.Item>
+                <Dropdown.Item eventKey="2">5</Dropdown.Item>
+                <Dropdown.Item eventKey="3">15</Dropdown.Item>
+                <Dropdown.Item eventKey="3">20</Dropdown.Item>
+
               </DropdownType>
             ))}
 
