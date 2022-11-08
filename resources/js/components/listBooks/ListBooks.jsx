@@ -7,12 +7,12 @@ export default function ListBooks (booksData) {
 
         return (
           <div className="row">
-            {/* {booksData.book.map((book,index)=>{
+            {booksData.book.map((book,index)=>{
                 return (
                     <BookCard key={index} book={book}/>
                 )
             }
-            )} */}
+            )}
           </div>
         );
     }

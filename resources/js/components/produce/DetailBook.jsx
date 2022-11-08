@@ -6,9 +6,15 @@ import axios from "axios";
 import IMAGES from "../../../assets/bookcover/Images";
 import { useEffect, useState } from "react";
 export default function DetailBook() {
+    const [productId, setProductId] = useState(
+        localStorage.getItem("productId")
+    );
+
     const [productDetail,setProduct]=useState()
-    const baseUrl = `http://127.0.0.1:8000/api/books/${productId}/reviews`;
+    const baseUrl = "http://127.0.0.1:8000/api/books/" +productId;
+
     useEffect(() => {
+        console.log(baseUrl)
         try{
             localStorage.removeItem("productId")
         }catch(error){
@@ -17,7 +23,7 @@ export default function DetailBook() {
         axios
             .get(baseUrl)
             .then((response) => {
-                console.log(response.data.book)
+                console.log(response.data.book.book_title)
                 const topDiscount = response.data;
 
                 setProduct(response.data.book);
@@ -40,9 +46,9 @@ export default function DetailBook() {
                 </p>
             </div>
             <div className="content-book">
-                <h4> {productDetail?productDetail.book_title:""}</h4>
+                <h4>Book title</h4>
                 <p className="text-break">
-                    {productDetail?productDetail.book_summary:""}
+                    {productDetail?productDetail.book.book_title:""}
                 </p>
 
             </div>

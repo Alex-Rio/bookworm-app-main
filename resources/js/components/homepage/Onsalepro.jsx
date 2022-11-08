@@ -49,7 +49,7 @@ export default function Onsalepro() {
     }, []);
 
     const detailClick =(event)=>{
-        nagivate('/detail/'+event.currentTarget.id+'/reviews')
+        nagivate('/detail/'+event.currentTarget.id)
 
         localStorage.setItem("productId",event.currentTarget.id)
     }

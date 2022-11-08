@@ -10,7 +10,7 @@ export default function BookCard(props) {
 
     return (
         <div className="col-3 justify-content-center mt-1 ml-1">
-            <Card>
+            <Card >
                 <Card.Img
                     variant="top"
                     src={IMAGES[book.book_cover_photo]}
