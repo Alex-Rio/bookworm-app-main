@@ -9,6 +9,7 @@ import "react-multi-carousel/lib/styles.css";
 import IMAGES from "../../../assets/bookcover/Images.js";
 import React from "react";
 import './stype.css';
+import { useNavigate } from "react-router";
 //import _ from 'lodash';
 //import { then } from 'laravel-mix';
 const responsive = {
@@ -32,6 +33,8 @@ const responsive = {
 };
 export default function Onsalepro() {
     const [discount, setDiscount] = React.useState([]);
+    const nagivate =useNavigate()
+
     const baseUrl =
         "http://127.0.0.1:8000/api/books/filter?show=10&sort=sale";
     useEffect(() => {
@@ -44,14 +47,22 @@ export default function Onsalepro() {
             })
             .catch((error) => console.error(`Error: ${error}`));
     }, []);
+
+    const detailClick =(event)=>{
+        nagivate('/detail/'+event.currentTarget.id+'/reviews')
+
+        localStorage.setItem("productId",event.currentTarget.id)
+    }
 //--------------------------------------------------------------------------
     return (
         <div className="m-2">
             <Carousel responsive={responsive}>
                 {discount.map((book, index) => {
+                    console.log(book.book_id)
                     return (
-                        <div className=" book ps-3 m-2 cardbook " key={index}>
-                            <Card className="" >
+
+                        <div id={book.book_id} onClick={detailClick} className=" book ps-3 m-2 cardbook " key={index}>
+                            <Card  className="" >
                                 <Card.Img
 
                                     variant="top"

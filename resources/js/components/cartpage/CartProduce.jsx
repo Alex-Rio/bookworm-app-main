@@ -1,5 +1,6 @@
 import { Container, Table } from "react-bootstrap";
 import React from "react";
+import IMAGES from "../../../assets/bookcover/Images";
 export default function CartProduce(){
     return(
        <Container className="">
@@ -14,16 +15,16 @@ export default function CartProduce(){
         </thead>
         <tbody>
           <tr>
-            <td>1</td>
             <td></td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td>45.00</td>
+            <td>1</td>
+            <td>1</td>
           </tr>
           <tr>
             <td>2</td>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
+            <td>54.00</td>
+            <td >1</td>
+            <td>1</td>
           </tr>
         </tbody>
       </Table>

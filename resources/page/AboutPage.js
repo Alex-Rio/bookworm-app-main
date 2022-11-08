@@ -9,8 +9,8 @@ export default function AboutPage(){
         <div>
             <Header/>
         </div>
-         <div className="wrapper-about mt-5">
-         <div className="pt-5 pb-5 border-bottom border-4 border-dark">
+         <div className=" mt-2">
+         <div className="pb-5 border-bottom border-4 border-dark">
                         <h1 className="d-inline mt-2">About Us</h1>
                     </div>
 

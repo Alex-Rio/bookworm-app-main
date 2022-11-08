@@ -9,37 +9,38 @@ import ReviewPorts from '../js/components/produce/ReviewPorts'
 import ListBooks from "../js/components/listBooks/ListBooks";
 
 
-export default function DetailPage(){
-    return(
-       <div>
-        <Container>
-            <Header/>
-            <div style={{paddingRight: 0}} >
-            <div className="pt-5 pb-5 border-bottom border-4 border-dark">
+export default function DetailPage() {
+    return (
+        <div>
+            <Container>
+                <Header />
+                <div style={{ paddingRight: 0 }} >
+                    <div className="pt-5 pb-5 border-bottom border-4 border-dark">
                         <h1 className="d-inline mt-2">Category Name</h1>
                     </div>
-            </div>
-            <div className="row mt-2 " style={{marginLeft : 0}}>
-                <div className=" detailbook col-8 border border-2 " >
-                    <DetailBook/>
                 </div>
-                <div className="col-4">
-                     <CartBook/>
-                </div>
-                <div className="row mt-5">
-                    <div className="col-8 border">
-                        <ListReviews/>
+                <div className="row mt-2 " style={{ marginLeft: 0 }}>
+                    <div className=" detailbook col-8 border border-2 " >
+                        <DetailBook />
                     </div>
                     <div className="col-4">
-                        <ReviewPorts/>
+                        <CartBook />
+                    </div>
+                    <div className="row mt-5">
+                        <div className="col-8 border">
+                            <ListReviews />
+                        </div>
+                        <div className="col-4">
+                            <ReviewPorts />
+                        </div>
+                    </div>
+                    <div>
+                        <ListBooks />
                     </div>
                 </div>
-                <div>
-                    <ListBooks/>
-                </div>
-            </div>
-        </Container>
+            </Container>
 
-       </div>
+        </div>
+
     )
 }

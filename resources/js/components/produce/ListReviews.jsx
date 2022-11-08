@@ -1,7 +1,30 @@
 import { Card, Col, Container, Row } from "react-bootstrap";
-import BtnSort from "../shoppage/BtnSort";
-
+import axios from "axios";
+import { useState,useEffect } from "react";
 export default  function CustomerReview(){
+    const [productId, setProductId] = useState(
+        localStorage.getItem("productId")
+    );
+
+    const [productDetail,setProduct]=useState()
+    const baseUrl = `http://127.0.0.1:8000/api/books/${productId}/reviews`;
+    useEffect(() => {
+        try{
+            localStorage.removeItem("productId")
+        }catch(error){
+
+        }
+        axios
+            .get(baseUrl)
+            .then((response) => {
+                console.log(response.data.book)
+                const topDiscount = response.data;
+
+                setProduct(response.data.book);
+            })
+            .catch((error) => console.error(`Error: ${error}`));
+    }, []);
+
     return(
     <div>
         <Container>
@@ -36,7 +59,7 @@ export default  function CustomerReview(){
           <Row>
             <Card border="secondary" className=" pb-2 mt-3 border border-2  border-top-0 border-end-0 border-start-0">
                 <Card.Title><b>Title Reviews</b> <span>| Star</span></Card.Title>
-                <Card.Text> adjoadpassjapdajdoadjasodadasjdjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj</Card.Text>
+                <Card.Text> </Card.Text>
             </Card>
           </Row>
         </Container>

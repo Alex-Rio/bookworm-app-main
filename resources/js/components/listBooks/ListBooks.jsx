@@ -4,15 +4,15 @@ import IMAGES from "../../../assets/bookcover/Images";
 import BookCard from "../produce/BookCard";
 
 export default function ListBooks (booksData) {
-    console.log(booksData.book)
+
         return (
           <div className="row">
-            {booksData.book.map((book,index)=>{
+            {/* {booksData.book.map((book,index)=>{
                 return (
                     <BookCard key={index} book={book}/>
                 )
             }
-            )}
+            )} */}
           </div>
         );
     }

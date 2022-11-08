@@ -17,21 +17,6 @@ class ReviewBookApi extends Controller
 {
     public function index($book)
     {
-
-        // $bookDetail = Book::detail()->findOrFail($book);
-        //     $bookDetail = new DetailBookResource($bookDetail);
-        //      $reviews = Book::findOrFail($book)->reviews()->paginate(4);
-        //     // dd('aaaaa');
-        //     $reviews = new ReviewBookCollection($reviews);
-
-        //     $group = Review::group($book)->get();
-
-        //     return response()->json([
-        //         'book' => $bookDetail,
-        //         'count' => $group,
-        //         'reviews' => $reviews
-        //     ], Response::HTTP_OK);
-
         try {
             $bookDetail = Book::detail()->findOrFail($book);
             $bookDetail = new DetailBookResource($bookDetail);

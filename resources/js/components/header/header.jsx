@@ -16,9 +16,9 @@ class Header extends Component{
         return(
             <Navbar bg='light' expand="lg">
 
-              <Navbar.Brand href="#"><h2>BookWorm</h2></Navbar.Brand>
+              <Navbar.Brand className='col' href="#"><h2>BookWorm</h2></Navbar.Brand>
 
-                <Nav className='justify-content-end'>
+                <Nav className=' justify-content-end'>
                     <Nav.Item>
                         <Nav.Link href='/'><Link to="/" className='fs-3 text-dark'> Home</Link></Nav.Link>
                     </Nav.Item>
