@@ -6,6 +6,7 @@ import DetailBook from "../js/components/produce/DetailBook";
 import Header from "../js/components/header/header";
 import "../css/detailbook.css";
 import ReviewPorts from '../js/components/produce/ReviewPorts'
+import ListBooks from "../js/components/listBooks/ListBooks";
 
 
 export default function DetailPage(){
@@ -34,7 +35,7 @@ export default function DetailPage(){
                     </div>
                 </div>
                 <div>
-
+                    <ListBooks/>
                 </div>
             </div>
         </Container>

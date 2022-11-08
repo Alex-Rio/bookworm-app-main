@@ -4,13 +4,11 @@ import Header from '../js/components/header/header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 //import OnSale from '../js/components/homepage/OnSale';
 import {Container,Col,Row} from 'react-grid-system';
-//import FeaturedBooks from '../js/components/homepage/RecommendBooks';
-//import ListBooks from '../js/components/listBooks/ListBooks';
-import Footer from '../js/components/footer/Footer';
+
+//import Footer from '../js/components/footer/Footer';
 import Onsalepro from '../js/components/homepage/Onsalepro';
 import RecommendBooks from "../js/components/homepage/RecommendBooks";
 import PopularBooks from "../js/components/homepage/PopularBooks";
-import Button from 'react-bootstrap/Button';
 import Tabs from "react-bootstrap/tabs"
 import Tab from "react-bootstrap/tab"
 

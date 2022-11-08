@@ -29,11 +29,11 @@ export default function BtnSort (){
                 id={`dropdown-button-drop-${idx}`}
                 size="sm"
                 variant="secondary"
-                title="Show 20 ">
+                title="Show">
                 <Dropdown.Item eventKey="1">5</Dropdown.Item>
-                <Dropdown.Item eventKey="2">5</Dropdown.Item>
+                <Dropdown.Item eventKey="2">10</Dropdown.Item>
                 <Dropdown.Item eventKey="3">15</Dropdown.Item>
-                <Dropdown.Item eventKey="3">20</Dropdown.Item>
+                <Dropdown.Item eventKey="4">20</Dropdown.Item>
 
               </DropdownType>
             ))}
